@@ -11,3 +11,5 @@ A VEX Pros V5 project that serves as a base project with common algorithms and c
 - Sample OPControl Code
 - Sample Autonomous Code
 - Global Classes (Encoders, Tasks, etc)
+- Display Controller
+- CI Build Task
