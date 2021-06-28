@@ -3,8 +3,6 @@
  * Add chassis code to allow for simple control
 */
 
-#include "driveSystems/tankdrive.h"
-
 // Motor pin numbers
 #define TL_PORT 1
 #define TR_PORT 2

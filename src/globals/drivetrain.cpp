@@ -1,4 +1,3 @@
-#include "driveSystems/tankdrive.h"
 #include "globals.h"
 
-TankDrive driveTrain(&tLeft, &tRight, &bLeft, &bRight);
+SkidSteerDrive driveTrain(&tLeft, &tRight, &bLeft, &bRight);

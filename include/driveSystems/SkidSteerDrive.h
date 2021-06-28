@@ -1,12 +1,14 @@
+#pragma once
+
 #include "main.h"
-#include "drivetrainPID.h"
+#include "drivetrain.h"
 
 /**
  * Class object to control a nonholomic / "tank drive" robot drivetrain
  * Utilizes PID + Odometry
 */
 
-class SkidSteerDrive : public DrivetrainPID {
+class SkidSteerDrive : public Drivetrain {
     public:
         /**
          * Initializes the SkidSteerDrive class with pointers to motors
@@ -18,32 +20,34 @@ class SkidSteerDrive : public DrivetrainPID {
         SkidSteerDrive(pros::Motor *tLeft, pros::Motor *tRight, pros::Motor *bLeft, pros::Motor *bRight);
 
         /**
-         * Moves the robot a certain amount of feet relative to its current position
-         * @param feet The amount of ft to move forwards or back (positive value for forward, negative for back)
+         * Drives chassis forward at specific speed
+         * @param speed The speed in range [-127, 127]
         */ 
-        void move(double feet) override;
+        void forward(double speed) override;
 
         /**
-         * Moves the robot to a certain position on the field
-         * @param x The x coordinate in ft
-         * @param y The y coordinate in ft
+         * Rotate chassis clockwise at specific speed
+         * @param speed The speed in range [-127, 127]
         */ 
-        void moveTo(double x, double y) override;
+        void rotate(double speed) override;
 
         /**
-         * Rotates the robot a certain amount of degrees relative to its current rotation
-         * @param degrees The amount of degrees to turn (positive for clockwise, negative for counter-clockwise)
-        */ 
-        void rotate(double degrees) override;
+         * Stop providing power to motors
+        */
+        void stop() override;
 
         /**
-         * Rotates the robot to a specific degree
-         * @param degrees The rotation degree
-        */ 
-       void rotateTo(double degrees) override;
+        * Drive robot in tank drive controller layout
+        */
+        void tank(double leftSpeed, double rightSpeed, double threshold = 0) override;
 
-    private:      
-        pros::Motor *tLeft; // Top left motor      
+        /**
+        * Drive robot in arcade drive controller layout
+        */
+        void arcade(double forwardSpeed, double yaw, double threshold = 0) override;
+    
+    private:
+        pros::Motor *tLeft; // Top left motor
         pros::Motor *tRight; // Top right motor      
         pros::Motor *bLeft; // Bottom left motor
         pros::Motor *bRight; // Bottom right motor

@@ -1,4 +1,8 @@
+#pragma once
+
 #include "main.h"
+#include "driveSystems/SkidSteerDrive.h"
+#include "driveSystems/drivetrainPID.h"
 
 // Motors
 
@@ -18,4 +22,5 @@ extern pros::ADIEncoder rEnc; // Right encoder
 
 
 // Drivetrain
-extern TankDrive driveTrain;
+extern SkidSteerDrive driveTrain;
+extern DrivetrainPID driveTrainPID;

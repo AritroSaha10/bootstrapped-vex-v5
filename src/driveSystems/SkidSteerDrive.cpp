@@ -10,20 +10,22 @@ SkidSteerDrive::SkidSteerDrive(pros::Motor *tLeft, pros::Motor *tRight, pros::Mo
     this->bRight = bRight;
 }
 
-void SkidSteerDrive::move(double feet) {
+void SkidSteerDrive::forward(double speed) {
     // ...
 }
 
-void SkidSteerDrive::moveTo(double x, double y) {
+void SkidSteerDrive::rotate(double speed) {
     // ...
 }
 
-void SkidSteerDrive::rotate(double degrees) {
+void SkidSteerDrive::stop() {
     // ...
 }
 
-void SkidSteerDrive::rotateTo(double degrees) {
+void SkidSteerDrive::tank(double leftSpeed, double rightSpeed, double threshold) {
     // ...
 }
 
-
+void SkidSteerDrive::arcade(double forwardSpeed, double yaw, double threshold) {
+    // ...
+}
