@@ -62,11 +62,17 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
+// Funcs required by PROS
 void autonomous(void);
 void initialize(void);
 void disabled(void);
 void competition_initialize(void);
 void opcontrol(void);
+
+// Custom funcs
+void myAuton(void);
+void myOpControl(void);
+
 #ifdef __cplusplus
 }
 #endif
