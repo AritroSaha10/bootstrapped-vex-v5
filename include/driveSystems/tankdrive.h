@@ -2,6 +2,7 @@
 
 /**
  * Class object to control a nonholomic / "tank drive" robot drivetrain
+ * Utilizes PID + Odometry
 */
 class TankDrive {
     public:
