@@ -3,6 +3,7 @@ A VEX Pros V5 project that serves as a base project with common algorithms and c
 
 ## Currently Implemented
 - CI Build Task
+- Global Classes (Encoders, Tasks, etc)
 
 ## TODO
 - PID
@@ -11,5 +12,4 @@ A VEX Pros V5 project that serves as a base project with common algorithms and c
 - State Machines Template
 - Sample OPControl Code
 - Sample Autonomous Code
-- Global Classes (Encoders, Tasks, etc)
 - Display Controller
