@@ -38,11 +38,17 @@ class SkidSteerDrive : public Drivetrain {
 
         /**
         * Drive robot in tank drive controller layout
+        * @param leftSpeed Speed provided to left side of chassis, in range [-127, 127]
+        * @param rightSpeed Speed provided to right side of chassis, in range [-127, 127]
+        * @param threshold Threshold of value before rounding to 0
         */
         void tank(double leftSpeed, double rightSpeed, double threshold = 0) override;
 
         /**
         * Drive robot in arcade drive controller layout
+        * @param forward Speed provided to move the chassis forward, in range [-127, 127]
+        * @param yaw Speed provided to turn the chassis, in range [-127, 127]
+        * @param threshold Threshold of value before rounding to 0
         */
         void arcade(double forwardSpeed, double yaw, double threshold = 0) override;
     
