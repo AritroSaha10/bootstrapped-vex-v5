@@ -67,10 +67,13 @@ class PIDController {
          * @param newSense New sensor data
         */
         double step(double newSense);
-        void reset(); // Reset PID controller values
+        // Reset PID controller values
+        void reset(); 
 
-        double getError(); // Get the current error of the controller
-        bool isSettled(); // Check if the controller is settled
+        // Get the current error of the controller
+        double getError(); 
+        // Check if the controller is settled
+        bool isSettled(); 
 };
 
 #endif
