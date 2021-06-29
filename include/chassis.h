@@ -1,13 +1,6 @@
-/*
- * TODO:
- * Add chassis code to allow for simple control
-*/
+#pragma once
 
 #include "driveSystems/drivetrainPID.h"
-
-// PID Gain Constants
-PIDInfo driveConstants(1, 1, 1);
-PIDInfo turnConstants(1, 1, 1);
 
 // Motor pin numbers
 #define TL_PORT 1
