@@ -165,6 +165,10 @@ Public Member Functions</h2></td></tr>
 <p>Initializes the <a class="el" href="class_drivetrain.html">Drivetrain</a> class </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">drivetrain</td><td>The type of drivetrain (ex. <a class="el" href="class_skid_steer_drive.html">SkidSteerDrive</a>) used </td></tr>
+    <tr><td class="paramname">driveConstants</td><td>The PID gain constants for the drive PID controller </td></tr>
+    <tr><td class="paramname">turnConstants</td><td>The PID gain constants for the turn PID controller </td></tr>
+    <tr><td class="paramname">tolerance</td><td>The tolerance for both PID controllers before it can be considered settled </td></tr>
+    <tr><td class="paramname">integralTolerance</td><td>The threshold at which the integral will be used or not </td></tr>
   </table>
   </dd>
 </dl>
@@ -405,7 +409,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_drivetrain_p_i_d.html">DrivetrainPID</a></li>
-    <li class="footer">Generated on Tue Jun 29 2021 19:43:24 for VEX V5 Bootstrapped Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Jun 29 2021 19:50:02 for VEX V5 Bootstrapped Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

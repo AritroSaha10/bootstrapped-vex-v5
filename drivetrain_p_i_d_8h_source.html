@@ -98,40 +98,40 @@ $(document).ready(function(){initNavTree('drivetrain_p_i_d_8h_source.html',''); 
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_drivetrain_p_i_d.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_drivetrain_p_i_d.html">DrivetrainPID</a> {</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="class_drivetrain_p_i_d.html#a8be9fe371e6cb41df56ab181657aed09">DrivetrainPID</a>(<a class="code" href="class_drivetrain.html">Drivetrain</a>* drivetrain, <a class="code" href="class_p_i_d_info.html">PIDInfo</a> driveConstants, <a class="code" href="class_p_i_d_info.html">PIDInfo</a> turnConstants, <span class="keywordtype">double</span> tolerance, <span class="keywordtype">double</span> integralTolerance);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="class_drivetrain_p_i_d.html#aa082af05a9e58ac7519e0351cc70f441">~DrivetrainPID</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_drivetrain_p_i_d.html#a1cfd65ef0ba6c56fc67db76ffaa40081">move</a>(<a class="code" href="class_vector2.html">Vector2</a> dir, <span class="keywordtype">double</span> turn);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_drivetrain_p_i_d.html#ada2c1e15f842228323f177d2111d6ed1">moveToOrientation</a>(<a class="code" href="class_vector2.html">Vector2</a> target, <span class="keywordtype">double</span> angle);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_drivetrain_p_i_d.html#aa7e0151ffc88f56144403e0ff1d457d9">moveToPoint</a>(<a class="code" href="class_vector2.html">Vector2</a> target);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_drivetrain_p_i_d.html#a074fc014ef92c0796d09fcc65a062379">moveRelative</a>(<a class="code" href="class_vector2.html">Vector2</a> offset, <span class="keywordtype">double</span> aOffset);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_drivetrain_p_i_d.html#aa531cedb4d4db338b0a27b7985225d58">rotateTo</a>(<span class="keywordtype">double</span> angle);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="class_drivetrain_p_i_d.html#a7473ac8518fe003e0f05ca11380502f3">   61</a></span>&#160;        <a class="code" href="class_p_i_d_controller.html">PIDController</a>* <a class="code" href="class_drivetrain_p_i_d.html#a7473ac8518fe003e0f05ca11380502f3">getDriveController</a>() { <span class="keywordflow">return</span> driveController; };</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_drivetrain_p_i_d.html#a0f6155f37a0ef28ceb1f471646663378">   66</a></span>&#160;        <a class="code" href="class_p_i_d_controller.html">PIDController</a>* <a class="code" href="class_drivetrain_p_i_d.html#a0f6155f37a0ef28ceb1f471646663378">getTurnController</a>() { <span class="keywordflow">return</span> turnController; };</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="comment">// PID Drive Controller</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="class_p_i_d_controller.html">PIDController</a>* driveController;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="comment">// PID Turn Controller</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="class_p_i_d_controller.html">PIDController</a>* turnController;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">// Pointer to drivetrain, note that it must refer to a derrived class</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="class_drivetrain.html">Drivetrain</a>* drivetrain;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="class_drivetrain_p_i_d.html#a8be9fe371e6cb41df56ab181657aed09">DrivetrainPID</a>(<a class="code" href="class_drivetrain.html">Drivetrain</a>* drivetrain, <a class="code" href="class_p_i_d_info.html">PIDInfo</a> driveConstants, <a class="code" href="class_p_i_d_info.html">PIDInfo</a> turnConstants, <span class="keywordtype">double</span> tolerance, <span class="keywordtype">double</span> integralTolerance);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="class_drivetrain_p_i_d.html#aa082af05a9e58ac7519e0351cc70f441">~DrivetrainPID</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_drivetrain_p_i_d.html#a1cfd65ef0ba6c56fc67db76ffaa40081">move</a>(<a class="code" href="class_vector2.html">Vector2</a> dir, <span class="keywordtype">double</span> turn);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_drivetrain_p_i_d.html#ada2c1e15f842228323f177d2111d6ed1">moveToOrientation</a>(<a class="code" href="class_vector2.html">Vector2</a> target, <span class="keywordtype">double</span> angle);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_drivetrain_p_i_d.html#aa7e0151ffc88f56144403e0ff1d457d9">moveToPoint</a>(<a class="code" href="class_vector2.html">Vector2</a> target);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_drivetrain_p_i_d.html#a074fc014ef92c0796d09fcc65a062379">moveRelative</a>(<a class="code" href="class_vector2.html">Vector2</a> offset, <span class="keywordtype">double</span> aOffset);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_drivetrain_p_i_d.html#aa531cedb4d4db338b0a27b7985225d58">rotateTo</a>(<span class="keywordtype">double</span> angle);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_drivetrain_p_i_d.html#a7473ac8518fe003e0f05ca11380502f3">   65</a></span>&#160;        <a class="code" href="class_p_i_d_controller.html">PIDController</a>* <a class="code" href="class_drivetrain_p_i_d.html#a7473ac8518fe003e0f05ca11380502f3">getDriveController</a>() { <span class="keywordflow">return</span> driveController; };</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_drivetrain_p_i_d.html#a0f6155f37a0ef28ceb1f471646663378">   70</a></span>&#160;        <a class="code" href="class_p_i_d_controller.html">PIDController</a>* <a class="code" href="class_drivetrain_p_i_d.html#a0f6155f37a0ef28ceb1f471646663378">getTurnController</a>() { <span class="keywordflow">return</span> turnController; };</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">// PID Drive Controller</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="class_p_i_d_controller.html">PIDController</a>* driveController;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="comment">// PID Turn Controller</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="class_p_i_d_controller.html">PIDController</a>* turnController;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="comment">// Pointer to drivetrain, note that it must refer to a derrived class</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="class_drivetrain.html">Drivetrain</a>* drivetrain;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;};</div>
 <div class="ttc" id="aclass_drivetrain_html"><div class="ttname"><a href="class_drivetrain.html">Drivetrain</a></div><div class="ttdef"><b>Definition:</b> drivetrain.h:9</div></div>
 <div class="ttc" id="aclass_drivetrain_p_i_d_html"><div class="ttname"><a href="class_drivetrain_p_i_d.html">DrivetrainPID</a></div><div class="ttdef"><b>Definition:</b> drivetrainPID.h:11</div></div>
 <div class="ttc" id="aclass_drivetrain_p_i_d_html_a074fc014ef92c0796d09fcc65a062379"><div class="ttname"><a href="class_drivetrain_p_i_d.html#a074fc014ef92c0796d09fcc65a062379">DrivetrainPID::moveRelative</a></div><div class="ttdeci">void moveRelative(Vector2 offset, double aOffset)</div><div class="ttdef"><b>Definition:</b> drivetrainPID.cpp:72</div></div>
-<div class="ttc" id="aclass_drivetrain_p_i_d_html_a0f6155f37a0ef28ceb1f471646663378"><div class="ttname"><a href="class_drivetrain_p_i_d.html#a0f6155f37a0ef28ceb1f471646663378">DrivetrainPID::getTurnController</a></div><div class="ttdeci">PIDController * getTurnController()</div><div class="ttdef"><b>Definition:</b> drivetrainPID.h:66</div></div>
+<div class="ttc" id="aclass_drivetrain_p_i_d_html_a0f6155f37a0ef28ceb1f471646663378"><div class="ttname"><a href="class_drivetrain_p_i_d.html#a0f6155f37a0ef28ceb1f471646663378">DrivetrainPID::getTurnController</a></div><div class="ttdeci">PIDController * getTurnController()</div><div class="ttdef"><b>Definition:</b> drivetrainPID.h:70</div></div>
 <div class="ttc" id="aclass_drivetrain_p_i_d_html_a1cfd65ef0ba6c56fc67db76ffaa40081"><div class="ttname"><a href="class_drivetrain_p_i_d.html#a1cfd65ef0ba6c56fc67db76ffaa40081">DrivetrainPID::move</a></div><div class="ttdeci">void move(Vector2 dir, double turn)</div><div class="ttdef"><b>Definition:</b> drivetrainPID.cpp:22</div></div>
-<div class="ttc" id="aclass_drivetrain_p_i_d_html_a7473ac8518fe003e0f05ca11380502f3"><div class="ttname"><a href="class_drivetrain_p_i_d.html#a7473ac8518fe003e0f05ca11380502f3">DrivetrainPID::getDriveController</a></div><div class="ttdeci">PIDController * getDriveController()</div><div class="ttdef"><b>Definition:</b> drivetrainPID.h:61</div></div>
+<div class="ttc" id="aclass_drivetrain_p_i_d_html_a7473ac8518fe003e0f05ca11380502f3"><div class="ttname"><a href="class_drivetrain_p_i_d.html#a7473ac8518fe003e0f05ca11380502f3">DrivetrainPID::getDriveController</a></div><div class="ttdeci">PIDController * getDriveController()</div><div class="ttdef"><b>Definition:</b> drivetrainPID.h:65</div></div>
 <div class="ttc" id="aclass_drivetrain_p_i_d_html_a8be9fe371e6cb41df56ab181657aed09"><div class="ttname"><a href="class_drivetrain_p_i_d.html#a8be9fe371e6cb41df56ab181657aed09">DrivetrainPID::DrivetrainPID</a></div><div class="ttdeci">DrivetrainPID(Drivetrain *drivetrain, PIDInfo driveConstants, PIDInfo turnConstants, double tolerance, double integralTolerance)</div><div class="ttdef"><b>Definition:</b> drivetrainPID.cpp:10</div></div>
 <div class="ttc" id="aclass_drivetrain_p_i_d_html_aa082af05a9e58ac7519e0351cc70f441"><div class="ttname"><a href="class_drivetrain_p_i_d.html#aa082af05a9e58ac7519e0351cc70f441">DrivetrainPID::~DrivetrainPID</a></div><div class="ttdeci">~DrivetrainPID()</div><div class="ttdef"><b>Definition:</b> drivetrainPID.cpp:16</div></div>
 <div class="ttc" id="aclass_drivetrain_p_i_d_html_aa531cedb4d4db338b0a27b7985225d58"><div class="ttname"><a href="class_drivetrain_p_i_d.html#aa531cedb4d4db338b0a27b7985225d58">DrivetrainPID::rotateTo</a></div><div class="ttdeci">void rotateTo(double angle)</div><div class="ttdef"><b>Definition:</b> drivetrainPID.cpp:81</div></div>
@@ -147,7 +147,7 @@ $(document).ready(function(){initNavTree('drivetrain_p_i_d_8h_source.html',''); 
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_39591a74d6be4654787815cc544210d7.html">driveSystems</a></li><li class="navelem"><b>drivetrainPID.h</b></li>
-    <li class="footer">Generated on Tue Jun 29 2021 19:43:24 for VEX V5 Bootstrapped Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Jun 29 2021 19:50:02 for VEX V5 Bootstrapped Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
