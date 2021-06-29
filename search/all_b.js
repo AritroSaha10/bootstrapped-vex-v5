@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['tank_24',['tank',['../class_drivetrain.html#aecf7916ba12fc06e4b5c52097876455e',1,'Drivetrain::tank()'],['../class_skid_steer_drive.html#a615098aca82ab14392fbc649f35a8f16',1,'SkidSteerDrive::tank()']]],
-  ['trackingdata_25',['TrackingData',['../class_tracking_data.html',1,'TrackingData'],['../class_tracking_data.html#adadca9ed8e7c953deb5e8919d3ef99ca',1,'TrackingData::TrackingData()']]]
+  ['reset_36',['reset',['../class_p_i_d_controller.html#ab6adfbffa30414f0a83b95ba999a2fea',1,'PIDController']]],
+  ['rotate_37',['rotate',['../class_drivetrain.html#a76750a9f97765ca61b19bb35d741c8cf',1,'Drivetrain::rotate()'],['../class_drivetrain_p_i_d.html#aa8fd990bf19bcdc6f1284aa4257071dd',1,'DrivetrainPID::rotate()'],['../class_skid_steer_drive.html#a03934c875306951e9378b950a38a2232',1,'SkidSteerDrive::rotate()']]],
+  ['rotateto_38',['rotateTo',['../class_drivetrain_p_i_d.html#ae2033c1719cfb7d4ae7dacb0236735ed',1,'DrivetrainPID']]]
 ];

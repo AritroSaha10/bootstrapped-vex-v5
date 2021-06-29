@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['update_26',['update',['../class_tracking_data.html#a9b133e4fe9976382df7cb2adedba1a4f',1,'TrackingData::update(double newX, double newY, double newH)'],['../class_tracking_data.html#a5a31e435bbcb11e1ae2f95e7f4489e2e',1,'TrackingData::update(Vector2 newPos, double newH)']]]
+  ['skidsteerdrive_39',['SkidSteerDrive',['../class_skid_steer_drive.html',1,'SkidSteerDrive'],['../class_skid_steer_drive.html#a8a2f1143661514d95ab09e71d9cea080',1,'SkidSteerDrive::SkidSteerDrive()']]],
+  ['step_40',['step',['../class_p_i_d_controller.html#af3996064bcfa9a70bdf08f2f3ba2445f',1,'PIDController']]],
+  ['stop_41',['stop',['../class_drivetrain.html#a3e5013731c753cc5ec12892f38fb8f12',1,'Drivetrain::stop()'],['../class_skid_steer_drive.html#a205d15fcfa6db054303126f579bf6d43',1,'SkidSteerDrive::stop()']]]
 ];

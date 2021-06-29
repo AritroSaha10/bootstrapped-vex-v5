@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['main_2eh_11',['main.h',['../main_8h.html',1,'']]],
-  ['move_12',['move',['../class_drivetrain_p_i_d.html#ac55d9d4f419c45340586e4e1dcbf0b0e',1,'DrivetrainPID']]],
-  ['moveto_13',['moveTo',['../class_drivetrain_p_i_d.html#a990ce1e9903ed79d4824eada00847a07',1,'DrivetrainPID']]]
+  ['i_18',['i',['../class_p_i_d_info.html#a476d375a7a3628625b771aa6e74e36f7',1,'PIDInfo']]],
+  ['initialize_19',['initialize',['../main_8h.html#a9efe22aaead3a5e936b5df459de02eba',1,'main.cpp']]],
+  ['issettled_20',['isSettled',['../class_p_i_d_controller.html#ae7b3615c00bfb5e7a98bf61b029a4929',1,'PIDController::isSettled()'],['../class_drivetrain_p_i_d.html#a4f1a03e3a4b767b2f18eea77cf3c808c',1,'DrivetrainPID::isSettled()']]]
 ];

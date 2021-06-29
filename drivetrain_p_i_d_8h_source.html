@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('drivetrain_p_i_d_8h_source.html',''); 
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_drivetrain_p_i_d.html#ae2033c1719cfb7d4ae7dacb0236735ed">   41</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_drivetrain_p_i_d.html#ae2033c1719cfb7d4ae7dacb0236735ed">rotateTo</a>(<span class="keywordtype">double</span> degrees);</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_drivetrain_p_i_d.html#a4f1a03e3a4b767b2f18eea77cf3c808c">   46</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_drivetrain_p_i_d.html#a4f1a03e3a4b767b2f18eea77cf3c808c">isSettled</a>() { <span class="keywordflow">return</span> controller-&gt;isSettled(); };</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_drivetrain_p_i_d.html#a4f1a03e3a4b767b2f18eea77cf3c808c">   46</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_drivetrain_p_i_d.html#a4f1a03e3a4b767b2f18eea77cf3c808c">isSettled</a>() { <span class="keywordflow">return</span> controller-&gt;<a class="code" href="class_p_i_d_controller.html#ae7b3615c00bfb5e7a98bf61b029a4929">isSettled</a>(); };</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="comment">// PID Controller</span></div>
@@ -124,7 +124,8 @@ $(document).ready(function(){initNavTree('drivetrain_p_i_d_8h_source.html',''); 
 <div class="ttc" id="aclass_drivetrain_p_i_d_html_ac55d9d4f419c45340586e4e1dcbf0b0e"><div class="ttname"><a href="class_drivetrain_p_i_d.html#ac55d9d4f419c45340586e4e1dcbf0b0e">DrivetrainPID::move</a></div><div class="ttdeci">void move(double feet)</div><div class="ttdef"><b>Definition:</b> drivetrainPID.cpp:6</div></div>
 <div class="ttc" id="aclass_drivetrain_p_i_d_html_ae2033c1719cfb7d4ae7dacb0236735ed"><div class="ttname"><a href="class_drivetrain_p_i_d.html#ae2033c1719cfb7d4ae7dacb0236735ed">DrivetrainPID::rotateTo</a></div><div class="ttdeci">void rotateTo(double degrees)</div></div>
 <div class="ttc" id="aclass_drivetrain_p_i_d_html_af934b7b6251d48dc0322244e1728da1d"><div class="ttname"><a href="class_drivetrain_p_i_d.html#af934b7b6251d48dc0322244e1728da1d">DrivetrainPID::DrivetrainPID</a></div><div class="ttdeci">DrivetrainPID(Drivetrain *drivetrain)</div><div class="ttdef"><b>Definition:</b> drivetrainPID.cpp:3</div></div>
-<div class="ttc" id="aclass_p_i_d_controller_html"><div class="ttname"><a href="class_p_i_d_controller.html">PIDController</a></div><div class="ttdef"><b>Definition:</b> PID.h:35</div></div>
+<div class="ttc" id="aclass_p_i_d_controller_html"><div class="ttname"><a href="class_p_i_d_controller.html">PIDController</a></div><div class="ttdef"><b>Definition:</b> PID.h:46</div></div>
+<div class="ttc" id="aclass_p_i_d_controller_html_ae7b3615c00bfb5e7a98bf61b029a4929"><div class="ttname"><a href="class_p_i_d_controller.html#ae7b3615c00bfb5e7a98bf61b029a4929">PIDController::isSettled</a></div><div class="ttdeci">bool isSettled()</div><div class="ttdef"><b>Definition:</b> PID.cpp:94</div></div>
 <div class="ttc" id="amain_8h_html"><div class="ttname"><a href="main_8h.html">main.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -132,7 +133,7 @@ $(document).ready(function(){initNavTree('drivetrain_p_i_d_8h_source.html',''); 
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_39591a74d6be4654787815cc544210d7.html">driveSystems</a></li><li class="navelem"><b>drivetrainPID.h</b></li>
-    <li class="footer">Generated on Tue Jun 29 2021 04:22:20 for VEX V5 Bootstrapped Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Jun 29 2021 04:42:38 for VEX V5 Bootstrapped Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

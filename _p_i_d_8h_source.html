@@ -95,61 +95,68 @@ $(document).ready(function(){initNavTree('_p_i_d_8h_source.html',''); initResiza
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_p_i_d_info.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_p_i_d_info.html">PIDInfo</a> {</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keywordtype">double</span> p; <span class="comment">// Proportional constant</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordtype">double</span> i; <span class="comment">// Integral constant</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordtype">double</span> d; <span class="comment">// Derivative constant</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="class_p_i_d_info.html#a28980929d2638d7be9f696cc53b1495f">PIDInfo</a>(<span class="keywordtype">double</span> p, <span class="keywordtype">double</span> i, <span class="keywordtype">double</span> d);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="class_p_i_d_info.html#a28980929d2638d7be9f696cc53b1495f">   29</a></span>&#160;        <a class="code" href="class_p_i_d_info.html#a28980929d2638d7be9f696cc53b1495f">PIDInfo</a>() {};</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_p_i_d_controller.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_p_i_d_controller.html">PIDController</a> {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">double</span> sense; <span class="comment">// Current sensor value</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">double</span> target; <span class="comment">// Target value</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">double</span> speed; <span class="comment">// Calculated new speed</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordtype">double</span> lastError; <span class="comment">// Last error value</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">double</span> error; <span class="comment">// Calculated error from sensor value and target</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">double</span> integral; <span class="comment">// Integral (sum of errors) during PID loop</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">double</span> derivative; <span class="comment">// Derivative during PID loop</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">double</span> settleStart; <span class="comment">// Time at which settling has started</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">bool</span> settling, settled = <span class="keyword">false</span>; <span class="comment">// Settle flags</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">double</span> tolerance; <span class="comment">// Tolerance value until settlable</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">double</span> integralTolerance; <span class="comment">// Integral tolerance for integral threshold (?)</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="class_p_i_d_info.html">PIDInfo</a> constants; <span class="comment">// PID gain constants</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <a class="code" href="class_p_i_d_controller.html#a6c518dba9714973d9e10baf123d92eb7">PIDController</a>(<span class="keywordtype">double</span> target, <a class="code" href="class_p_i_d_info.html">PIDInfo</a> constants, <span class="keywordtype">double</span> tolerance, <span class="keywordtype">double</span> integralTolerance);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_p_i_d_controller.html#af3996064bcfa9a70bdf08f2f3ba2445f">step</a>(<span class="keywordtype">double</span> newSense);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">// Reset PID controller values</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">void</span> reset(); </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">// Get the current error of the controller</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">double</span> getError(); </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">// Check if the controller is settled</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">bool</span> isSettled(); </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_p_i_d_controller_html"><div class="ttname"><a href="class_p_i_d_controller.html">PIDController</a></div><div class="ttdef"><b>Definition:</b> PID.h:35</div></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_p_i_d_info.html#a5670877c2340287c92f7d1fc31d1fea1">   17</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_p_i_d_info.html#a5670877c2340287c92f7d1fc31d1fea1">p</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_p_i_d_info.html#a476d375a7a3628625b771aa6e74e36f7">   22</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_p_i_d_info.html#a476d375a7a3628625b771aa6e74e36f7">i</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_p_i_d_info.html#aff9b711239252cbe44095ce61b72d02d">   27</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_p_i_d_info.html#aff9b711239252cbe44095ce61b72d02d">d</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="class_p_i_d_info.html#a28980929d2638d7be9f696cc53b1495f">PIDInfo</a>(<span class="keywordtype">double</span> <a class="code" href="class_p_i_d_info.html#a5670877c2340287c92f7d1fc31d1fea1">p</a>, <span class="keywordtype">double</span> <a class="code" href="class_p_i_d_info.html#a476d375a7a3628625b771aa6e74e36f7">i</a>, <span class="keywordtype">double</span> <a class="code" href="class_p_i_d_info.html#aff9b711239252cbe44095ce61b72d02d">d</a>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_p_i_d_info.html#a28980929d2638d7be9f696cc53b1495f">   40</a></span>&#160;        <a class="code" href="class_p_i_d_info.html#a28980929d2638d7be9f696cc53b1495f">PIDInfo</a>() {};</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_p_i_d_controller.html">   46</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_p_i_d_controller.html">PIDController</a> {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">double</span> sense; <span class="comment">// Current sensor value</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">double</span> target; <span class="comment">// Target value</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">double</span> speed; <span class="comment">// Calculated new speed</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">double</span> lastError; <span class="comment">// Last error value</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">double</span> error; <span class="comment">// Calculated error from sensor value and target</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">double</span> integral; <span class="comment">// Integral (sum of errors) during PID loop</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">double</span> derivative; <span class="comment">// Derivative during PID loop</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">double</span> settleStart; <span class="comment">// Time at which settling has started</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">bool</span> settling, settled = <span class="keyword">false</span>; <span class="comment">// Settle flags</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">double</span> tolerance; <span class="comment">// Tolerance value until settlable</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordtype">double</span> integralTolerance; <span class="comment">// Integral tolerance for integral threshold (?)</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="class_p_i_d_info.html">PIDInfo</a> constants; <span class="comment">// PID gain constants</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="class_p_i_d_controller.html#a6c518dba9714973d9e10baf123d92eb7">PIDController</a>(<span class="keywordtype">double</span> target, <a class="code" href="class_p_i_d_info.html">PIDInfo</a> constants, <span class="keywordtype">double</span> tolerance, <span class="keywordtype">double</span> integralTolerance);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_p_i_d_controller.html#af3996064bcfa9a70bdf08f2f3ba2445f">step</a>(<span class="keywordtype">double</span> newSense);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_p_i_d_controller.html#ab6adfbffa30414f0a83b95ba999a2fea">reset</a>(); </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_p_i_d_controller.html#a6e38a2b2037bec7cd522b1c4cde86f97">getError</a>();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="class_p_i_d_controller.html#ae7b3615c00bfb5e7a98bf61b029a4929">isSettled</a>(); </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_p_i_d_controller_html"><div class="ttname"><a href="class_p_i_d_controller.html">PIDController</a></div><div class="ttdef"><b>Definition:</b> PID.h:46</div></div>
 <div class="ttc" id="aclass_p_i_d_controller_html_a6c518dba9714973d9e10baf123d92eb7"><div class="ttname"><a href="class_p_i_d_controller.html#a6c518dba9714973d9e10baf123d92eb7">PIDController::PIDController</a></div><div class="ttdeci">PIDController(double target, PIDInfo constants, double tolerance, double integralTolerance)</div><div class="ttdef"><b>Definition:</b> PID.cpp:16</div></div>
+<div class="ttc" id="aclass_p_i_d_controller_html_a6e38a2b2037bec7cd522b1c4cde86f97"><div class="ttname"><a href="class_p_i_d_controller.html#a6e38a2b2037bec7cd522b1c4cde86f97">PIDController::getError</a></div><div class="ttdeci">double getError()</div><div class="ttdef"><b>Definition:</b> PID.cpp:90</div></div>
+<div class="ttc" id="aclass_p_i_d_controller_html_ab6adfbffa30414f0a83b95ba999a2fea"><div class="ttname"><a href="class_p_i_d_controller.html#ab6adfbffa30414f0a83b95ba999a2fea">PIDController::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdef"><b>Definition:</b> PID.cpp:78</div></div>
+<div class="ttc" id="aclass_p_i_d_controller_html_ae7b3615c00bfb5e7a98bf61b029a4929"><div class="ttname"><a href="class_p_i_d_controller.html#ae7b3615c00bfb5e7a98bf61b029a4929">PIDController::isSettled</a></div><div class="ttdeci">bool isSettled()</div><div class="ttdef"><b>Definition:</b> PID.cpp:94</div></div>
 <div class="ttc" id="aclass_p_i_d_controller_html_af3996064bcfa9a70bdf08f2f3ba2445f"><div class="ttname"><a href="class_p_i_d_controller.html#af3996064bcfa9a70bdf08f2f3ba2445f">PIDController::step</a></div><div class="ttdeci">double step(double newSense)</div><div class="ttdef"><b>Definition:</b> PID.cpp:25</div></div>
 <div class="ttc" id="aclass_p_i_d_info_html"><div class="ttname"><a href="class_p_i_d_info.html">PIDInfo</a></div><div class="ttdef"><b>Definition:</b> PID.h:12</div></div>
-<div class="ttc" id="aclass_p_i_d_info_html_a28980929d2638d7be9f696cc53b1495f"><div class="ttname"><a href="class_p_i_d_info.html#a28980929d2638d7be9f696cc53b1495f">PIDInfo::PIDInfo</a></div><div class="ttdeci">PIDInfo()</div><div class="ttdef"><b>Definition:</b> PID.h:29</div></div>
+<div class="ttc" id="aclass_p_i_d_info_html_a28980929d2638d7be9f696cc53b1495f"><div class="ttname"><a href="class_p_i_d_info.html#a28980929d2638d7be9f696cc53b1495f">PIDInfo::PIDInfo</a></div><div class="ttdeci">PIDInfo()</div><div class="ttdef"><b>Definition:</b> PID.h:40</div></div>
+<div class="ttc" id="aclass_p_i_d_info_html_a476d375a7a3628625b771aa6e74e36f7"><div class="ttname"><a href="class_p_i_d_info.html#a476d375a7a3628625b771aa6e74e36f7">PIDInfo::i</a></div><div class="ttdeci">double i</div><div class="ttdef"><b>Definition:</b> PID.h:22</div></div>
+<div class="ttc" id="aclass_p_i_d_info_html_a5670877c2340287c92f7d1fc31d1fea1"><div class="ttname"><a href="class_p_i_d_info.html#a5670877c2340287c92f7d1fc31d1fea1">PIDInfo::p</a></div><div class="ttdeci">double p</div><div class="ttdef"><b>Definition:</b> PID.h:17</div></div>
+<div class="ttc" id="aclass_p_i_d_info_html_aff9b711239252cbe44095ce61b72d02d"><div class="ttname"><a href="class_p_i_d_info.html#aff9b711239252cbe44095ce61b72d02d">PIDInfo::d</a></div><div class="ttdeci">double d</div><div class="ttdef"><b>Definition:</b> PID.h:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_a4935814f13a540f683bf390f3273be3.html">control</a></li><li class="navelem"><b>PID.h</b></li>
-    <li class="footer">Generated on Tue Jun 29 2021 04:22:20 for VEX V5 Bootstrapped Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Jun 29 2021 04:42:38 for VEX V5 Bootstrapped Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

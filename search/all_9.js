@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['rotate_19',['rotate',['../class_drivetrain.html#a76750a9f97765ca61b19bb35d741c8cf',1,'Drivetrain::rotate()'],['../class_drivetrain_p_i_d.html#aa8fd990bf19bcdc6f1284aa4257071dd',1,'DrivetrainPID::rotate()'],['../class_skid_steer_drive.html#a03934c875306951e9378b950a38a2232',1,'SkidSteerDrive::rotate()']]],
-  ['rotateto_20',['rotateTo',['../class_drivetrain_p_i_d.html#ae2033c1719cfb7d4ae7dacb0236735ed',1,'DrivetrainPID']]]
+  ['opcontrol_27',['opcontrol',['../main_8h.html#a1903abdb5ef0f301d660754c8315fc17',1,'main.cpp']]],
+  ['operator_2a_28',['operator*',['../class_vector2.html#a9b046398cf70251b0e1aaecf7d43ca51',1,'Vector2']]],
+  ['operator_2b_29',['operator+',['../class_vector2.html#a63e74f57546a0537d6fc8eed7ea1ddc9',1,'Vector2']]],
+  ['operator_2d_30',['operator-',['../class_vector2.html#a0feca9ade3edd654f44ab6073ba3f15f',1,'Vector2']]]
 ];

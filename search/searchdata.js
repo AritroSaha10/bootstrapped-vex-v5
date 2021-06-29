@@ -1,11 +1,13 @@
 var indexSectionsWithContent =
 {
-  0: "abcdfimoprstuv",
+  0: "abcdfgimnoprstuv",
   1: "dpstv",
   2: "am",
-  3: "acdfimoprstuv",
-  4: "p",
-  5: "b"
+  3: "acdfgimnoprstuv",
+  4: "dip",
+  5: "o",
+  6: "p",
+  7: "b"
 };
 
 var indexSectionNames =
@@ -14,8 +16,10 @@ var indexSectionNames =
   1: "classes",
   2: "files",
   3: "functions",
-  4: "defines",
-  5: "pages"
+  4: "variables",
+  5: "related",
+  6: "defines",
+  7: "pages"
 };
 
 var indexSectionLabels =
@@ -24,7 +28,9 @@ var indexSectionLabels =
   1: "Classes",
   2: "Files",
   3: "Functions",
-  4: "Macros",
-  5: "Pages"
+  4: "Variables",
+  5: "Friends",
+  6: "Macros",
+  7: "Pages"
 };
 
