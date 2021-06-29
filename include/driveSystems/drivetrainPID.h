@@ -3,6 +3,7 @@
 #include "main.h"
 #include "drivetrain.h"
 #include "control/PID.h"
+#include "tracking.h"
 
 /**
  * Wrapper class on top of Drivetrain class to implement PID + Odom on any drivetrain
@@ -13,41 +14,63 @@ class DrivetrainPID {
          * Initializes the Drivetrain class
          * @param drivetrain The type of drivetrain (ex. SkidSteerDrive) used
         */
-        DrivetrainPID(Drivetrain* drivetrain);
+        DrivetrainPID(Drivetrain* drivetrain, PIDInfo driveConstants, PIDInfo turnConstants, double tolerance, double integralTolerance);
 
         /**
-         * Moves the robot a certain amount of feet relative to its current position
-         * @param feet The amount of ft to move forwards or back (positive value for forward, negative for back)
-        */ 
-        void move(double feet);
+         * Destructor for class
+        */
+        ~DrivetrainPID();
+        
+        /**
+         * Set the velocity based on the current and wanted position and angle
+         * @param dir The direction as a Vector2
+         * @param turn The angle in radians
+        */
+        void move(Vector2 dir, double turn);
 
         /**
-         * Moves the robot to a certain position on the field
-         * @param x The x coordinate in ft
-         * @param y The y coordinate in ft
-        */ 
-        void moveTo(double x, double y);
+         * Turn to the angle needed to reach a position, drive to the position, and then turn to the desired angle
+         * @param target The position to reach as a Vector2
+         * @param angle The angle desired at the end of the action in radians
+        */
+        void moveToOrientation(Vector2 target, double angle);
 
         /**
-         * Rotates the robot a certain amount of degrees relative to its current rotation
-         * @param degrees The amount of degrees to turn (positive for clockwise, negative for counter-clockwise)
+         * Move to a specific point on the field
+         * @param target The position to reach as a Vector2
         */ 
-        void rotate(double degrees);
+        void moveToPoint(Vector2 target);
 
         /**
-         * Rotates the robot to a specific degree
-         * @param degrees The rotation degree
-        */ 
-        void rotateTo(double degrees);
+         * Move and turn to a specific point and orientation relative to the bot's current
+         * position and orientation
+         * @param offset The desired position relative to the robot's current position as a Vector2
+         * @param aOffset The desired angle relative to the robot's current orientation in radians
+        */
+        void moveRelative(Vector2 offset, double aOffset);
 
         /**
-         * Returns if drivetrain is settled
+         * Rotate the robot to the desired orientation
+         * @param angle The desired rotation in radians
         */ 
-        bool isSettled() { return controller->isSettled(); };
+        void rotateTo(double angle);
+
+        /**
+         * Returns the drive controller
+        */ 
+        PIDController* getDriveController() { return driveController; };
+
+        /**
+         * Returns the turn controller
+        */ 
+        PIDController* getTurnController() { return turnController; };
     
     private:
-        // PID Controller
-        PIDController* controller;
+        // PID Drive Controller
+        PIDController* driveController;
+
+        // PID Turn Controller
+        PIDController* turnController;
 
         // Pointer to drivetrain, note that it must refer to a derrived class
         Drivetrain* drivetrain;

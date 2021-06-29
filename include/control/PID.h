@@ -46,7 +46,6 @@ class PIDInfo {
 class PIDController {
     private:
         double sense; // Current sensor value
-        double target; // Target value
         double speed; // Calculated new speed
         
         double lastError; // Last error value
@@ -64,6 +63,8 @@ class PIDController {
         PIDInfo constants; // PID gain constants
 
     public:
+        double target; // Target value
+        
         /**
          * Initializes the PID Controller with preloaded values
          * @param target Current target
