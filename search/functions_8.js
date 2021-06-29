@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pidcontroller_51',['PIDController',['../class_p_i_d_controller.html#a6c518dba9714973d9e10baf123d92eb7',1,'PIDController']]],
-  ['pidinfo_52',['PIDInfo',['../class_p_i_d_info.html#acb32ee08e342487aaf46fe8f4cf58dd7',1,'PIDInfo::PIDInfo(double p, double i, double d)'],['../class_p_i_d_info.html#a28980929d2638d7be9f696cc53b1495f',1,'PIDInfo::PIDInfo()']]]
+  ['rotate_51',['rotate',['../class_drivetrain.html#a76750a9f97765ca61b19bb35d741c8cf',1,'Drivetrain::rotate()'],['../class_drivetrain_p_i_d.html#aa8fd990bf19bcdc6f1284aa4257071dd',1,'DrivetrainPID::rotate()'],['../class_skid_steer_drive.html#a03934c875306951e9378b950a38a2232',1,'SkidSteerDrive::rotate()']]],
+  ['rotateto_52',['rotateTo',['../class_drivetrain_p_i_d.html#ae2033c1719cfb7d4ae7dacb0236735ed',1,'DrivetrainPID']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['tank_58',['tank',['../class_drivetrain.html#aecf7916ba12fc06e4b5c52097876455e',1,'Drivetrain::tank()'],['../class_skid_steer_drive.html#a615098aca82ab14392fbc649f35a8f16',1,'SkidSteerDrive::tank()']]],
-  ['trackingdata_59',['TrackingData',['../class_tracking_data.html#adadca9ed8e7c953deb5e8919d3ef99ca',1,'TrackingData']]]
+  ['update_58',['update',['../class_tracking_data.html#a9b133e4fe9976382df7cb2adedba1a4f',1,'TrackingData::update(double newX, double newY, double newH)'],['../class_tracking_data.html#a5a31e435bbcb11e1ae2f95e7f4489e2e',1,'TrackingData::update(Vector2 newPos, double newH)']]]
 ];

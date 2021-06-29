@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['rotate_20',['rotate',['../class_drivetrain.html#a76750a9f97765ca61b19bb35d741c8cf',1,'Drivetrain::rotate()'],['../class_drivetrain_p_i_d.html#aa8fd990bf19bcdc6f1284aa4257071dd',1,'DrivetrainPID::rotate()'],['../class_skid_steer_drive.html#a03934c875306951e9378b950a38a2232',1,'SkidSteerDrive::rotate()']]],
-  ['rotateto_21',['rotateTo',['../class_drivetrain_p_i_d.html#ae2033c1719cfb7d4ae7dacb0236735ed',1,'DrivetrainPID']]]
+  ['skidsteerdrive_21',['SkidSteerDrive',['../class_skid_steer_drive.html',1,'SkidSteerDrive'],['../class_skid_steer_drive.html#a8a2f1143661514d95ab09e71d9cea080',1,'SkidSteerDrive::SkidSteerDrive()']]],
+  ['step_22',['step',['../class_p_i_d_controller.html#af3996064bcfa9a70bdf08f2f3ba2445f',1,'PIDController']]],
+  ['stop_23',['stop',['../class_drivetrain.html#a3e5013731c753cc5ec12892f38fb8f12',1,'Drivetrain::stop()'],['../class_skid_steer_drive.html#a205d15fcfa6db054303126f579bf6d43',1,'SkidSteerDrive::stop()']]]
 ];

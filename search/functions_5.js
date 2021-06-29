@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['initialize_46',['initialize',['../main_8h.html#a9efe22aaead3a5e936b5df459de02eba',1,'main.cpp']]],
-  ['issettled_47',['isSettled',['../class_drivetrain_p_i_d.html#a4f1a03e3a4b767b2f18eea77cf3c808c',1,'DrivetrainPID']]]
+  ['move_46',['move',['../class_drivetrain_p_i_d.html#ac55d9d4f419c45340586e4e1dcbf0b0e',1,'DrivetrainPID']]],
+  ['moveto_47',['moveTo',['../class_drivetrain_p_i_d.html#a990ce1e9903ed79d4824eada00847a07',1,'DrivetrainPID']]]
 ];

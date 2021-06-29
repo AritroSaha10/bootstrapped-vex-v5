@@ -7,7 +7,7 @@ var class_vector2 =
     [ "getX", "class_vector2.html#ab2eb904786e8dfaf515a6547a95d82e3", null ],
     [ "getY", "class_vector2.html#a96a93329dcd767c95c388a390eb10096", null ],
     [ "normalize", "class_vector2.html#abf921b268aff0012ec9b435fc35ad66a", null ],
-    [ "operator*", "class_vector2.html#a2e923eb2dc41cd377715eb3f765ab71d", null ],
+    [ "operator*", "class_vector2.html#a9b046398cf70251b0e1aaecf7d43ca51", null ],
     [ "operator+", "class_vector2.html#a63e74f57546a0537d6fc8eed7ea1ddc9", null ],
     [ "operator-", "class_vector2.html#a0feca9ade3edd654f44ab6073ba3f15f", null ]
 ];

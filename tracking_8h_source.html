@@ -95,75 +95,81 @@ $(document).ready(function(){initNavTree('tracking_8h_source.html',''); initResi
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">double</span> radToDeg(<span class="keywordtype">double</span> r);</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">double</span> degToRad(<span class="keywordtype">double</span> r);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">double</span> degToRad(<span class="keywordtype">double</span> d);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_vector2.html">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_vector2.html">Vector2</a> {</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_vector2.html#a695ccc36d26cb5f950ed47bfc4e6cfe1">   32</a></span>&#160;        <a class="code" href="class_vector2.html#a695ccc36d26cb5f950ed47bfc4e6cfe1">Vector2</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="class_vector2.html">Vector2</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="class_vector2.html">Vector2</a>(); <span class="comment">// Initializes the Vector2 class</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">double</span> getX(); <span class="comment">// Returns the x value of the vector</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">double</span> getY(); <span class="comment">// Returns the y value of the vector</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordtype">double</span> getMagnitude(); <span class="comment">// Returns the magnitude of the vector</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">double</span> getAngle(); <span class="comment">// Returns the angle of the vector</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="comment">// Initializes the Vector2 class</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="class_vector2.html">Vector2</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="comment">// Returns the x value of the vector</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">double</span> getX() { <span class="keywordflow">return</span> this-&gt;x; };</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">// Returns the y value of the vector</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">double</span> getY() { <span class="keywordflow">return</span> this-&gt;y; };</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="class_vector2.html">Vector2</a> normalize(); <span class="comment">// Normalizes vector</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">// Arithmetic functions</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">friend</span> <a class="code" href="class_vector2.html">Vector2</a> operator+(<span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> &amp;v1, <span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> &amp;v2); <span class="comment">// Vector addition</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">friend</span> <a class="code" href="class_vector2.html">Vector2</a> operator-(<span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> &amp;v1, <span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> &amp;v2); <span class="comment">// Vector subtraction</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">friend</span> <a class="code" href="class_vector2.html">Vector2</a> operator*(<span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> &amp;v1, <span class="keywordtype">double</span> scalar); <span class="comment">// Scalar multiplication of vector</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">double</span> x, y;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;};</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_tracking_data.html">   56</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_tracking_data.html">TrackingData</a> {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_tracking_data.html#adadca9ed8e7c953deb5e8919d3ef99ca">   64</a></span>&#160;        <a class="code" href="class_tracking_data.html#adadca9ed8e7c953deb5e8919d3ef99ca">TrackingData</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> h);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_tracking_data.html#a2f61f2a5ce47042449f4b78052632940">   68</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="class_tracking_data.html#a2f61f2a5ce47042449f4b78052632940">getX</a>(); <span class="comment">// Return x value of position</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">double</span> getY(); <span class="comment">// Return y value of position</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">double</span> getHeading(); <span class="comment">// Return heading</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="class_vector2.html">Vector2</a> getPos(); <span class="comment">// Return position in Vector2 form</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="class_vector2.html">Vector2</a> getForward(); <span class="comment">// Return the forward in Vec2 form</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">// Returns the magnitude of the vector</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">double</span> getMagnitude();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">// Returns the angle of the vector</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">double</span> getAngle();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">// Normalizes vector</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="class_vector2.html">Vector2</a> normalize(); </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">// Arithmetic functions</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">// Vector addition</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">friend</span> <a class="code" href="class_vector2.html">Vector2</a> operator+(<span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> &amp;v1, <span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> &amp;v2);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">// Vector subtraction</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">friend</span> <a class="code" href="class_vector2.html">Vector2</a> operator-(<span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> &amp;v1, <span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> &amp;v2);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="comment">// Scalar multiplication of vector </span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keyword">friend</span> <a class="code" href="class_vector2.html">Vector2</a> operator*(<span class="keyword">const</span> <a class="code" href="class_vector2.html">Vector2</a> &amp;v1, <span class="keyword">const</span> <span class="keywordtype">double</span> scalar);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">double</span> x, y;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_tracking_data.html">   65</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_tracking_data.html">TrackingData</a> {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <a class="code" href="class_tracking_data.html#adadca9ed8e7c953deb5e8919d3ef99ca">TrackingData</a>(<span class="keywordtype">double</span> x, <span class="keywordtype">double</span> y, <span class="keywordtype">double</span> h);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_tracking_data.html#a9b133e4fe9976382df7cb2adedba1a4f">   81</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_tracking_data.html#a9b133e4fe9976382df7cb2adedba1a4f">update</a>(<span class="keywordtype">double</span> newX, <span class="keywordtype">double</span> newY, <span class="keywordtype">double</span> newH);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">// Return heading</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">double</span> getHeading(); </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <span class="comment">// Return position in Vector2 form</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="class_vector2.html">Vector2</a> getPos(); </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="comment">// Return the forward in Vec2 form</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="class_vector2.html">Vector2</a> getForward(); </div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="class_tracking_data.html#a5a31e435bbcb11e1ae2f95e7f4489e2e">   88</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_tracking_data.html#a5a31e435bbcb11e1ae2f95e7f4489e2e">update</a>(<a class="code" href="class_vector2.html">Vector2</a> newPos, <span class="keywordtype">double</span> newH);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="class_vector2.html">Vector2</a> pos;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordtype">double</span> heading;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;};</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keywordtype">double</span> rotateVector(<a class="code" href="class_vector2.html">Vector2</a> &amp;vec, <span class="keywordtype">double</span> angle);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keywordtype">double</span> toLocalCoordinates(<a class="code" href="class_vector2.html">Vector2</a> &amp;vec);</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;<span class="keywordtype">double</span> toGlobalCoordinates(<a class="code" href="class_vector2.html">Vector2</a> &amp;vec);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="keywordtype">void</span> tracking(<span class="keywordtype">void</span>* param);</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aclass_tracking_data_html"><div class="ttname"><a href="class_tracking_data.html">TrackingData</a></div><div class="ttdef"><b>Definition:</b> tracking.h:56</div></div>
-<div class="ttc" id="aclass_tracking_data_html_a2f61f2a5ce47042449f4b78052632940"><div class="ttname"><a href="class_tracking_data.html#a2f61f2a5ce47042449f4b78052632940">TrackingData::getX</a></div><div class="ttdeci">double getX()</div><div class="ttdoc">Are these necessary if we can just return the vec?</div></div>
-<div class="ttc" id="aclass_tracking_data_html_a5a31e435bbcb11e1ae2f95e7f4489e2e"><div class="ttname"><a href="class_tracking_data.html#a5a31e435bbcb11e1ae2f95e7f4489e2e">TrackingData::update</a></div><div class="ttdeci">void update(Vector2 newPos, double newH)</div></div>
-<div class="ttc" id="aclass_tracking_data_html_a9b133e4fe9976382df7cb2adedba1a4f"><div class="ttname"><a href="class_tracking_data.html#a9b133e4fe9976382df7cb2adedba1a4f">TrackingData::update</a></div><div class="ttdeci">void update(double newX, double newY, double newH)</div></div>
-<div class="ttc" id="aclass_tracking_data_html_adadca9ed8e7c953deb5e8919d3ef99ca"><div class="ttname"><a href="class_tracking_data.html#adadca9ed8e7c953deb5e8919d3ef99ca">TrackingData::TrackingData</a></div><div class="ttdeci">TrackingData(double x, double y, double h)</div></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_tracking_data.html#a9b133e4fe9976382df7cb2adedba1a4f">update</a>(<span class="keywordtype">double</span> newX, <span class="keywordtype">double</span> newY, <span class="keywordtype">double</span> newH);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_tracking_data.html#a9b133e4fe9976382df7cb2adedba1a4f">update</a>(<a class="code" href="class_vector2.html">Vector2</a> newPos, <span class="keywordtype">double</span> newH);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <a class="code" href="class_vector2.html">Vector2</a> pos;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordtype">double</span> heading;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<a class="code" href="class_vector2.html">Vector2</a> rotateVector(<a class="code" href="class_vector2.html">Vector2</a> vec, <span class="keywordtype">double</span> angle);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<a class="code" href="class_vector2.html">Vector2</a> toLocalCoordinates(<a class="code" href="class_vector2.html">Vector2</a> vec);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<a class="code" href="class_vector2.html">Vector2</a> toGlobalCoordinates(<a class="code" href="class_vector2.html">Vector2</a> vec);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keywordtype">void</span> tracking(<span class="keywordtype">void</span>* param);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_tracking_data_html"><div class="ttname"><a href="class_tracking_data.html">TrackingData</a></div><div class="ttdef"><b>Definition:</b> tracking.h:65</div></div>
+<div class="ttc" id="aclass_tracking_data_html_a9b133e4fe9976382df7cb2adedba1a4f"><div class="ttname"><a href="class_tracking_data.html#a9b133e4fe9976382df7cb2adedba1a4f">TrackingData::update</a></div><div class="ttdeci">void update(double newX, double newY, double newH)</div><div class="ttdef"><b>Definition:</b> trackingData.cpp:19</div></div>
+<div class="ttc" id="aclass_tracking_data_html_adadca9ed8e7c953deb5e8919d3ef99ca"><div class="ttname"><a href="class_tracking_data.html#adadca9ed8e7c953deb5e8919d3ef99ca">TrackingData::TrackingData</a></div><div class="ttdeci">TrackingData(double x, double y, double h)</div><div class="ttdef"><b>Definition:</b> trackingData.cpp:3</div></div>
 <div class="ttc" id="aclass_vector2_html"><div class="ttname"><a href="class_vector2.html">Vector2</a></div><div class="ttdef"><b>Definition:</b> tracking.h:25</div></div>
-<div class="ttc" id="aclass_vector2_html_a695ccc36d26cb5f950ed47bfc4e6cfe1"><div class="ttname"><a href="class_vector2.html#a695ccc36d26cb5f950ed47bfc4e6cfe1">Vector2::Vector2</a></div><div class="ttdeci">Vector2(double x, double y)</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>tracking.h</b></li>
-    <li class="footer">Generated on Tue Jun 29 2021 03:48:35 for VEX V5 Bootstrapped Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Jun 29 2021 04:22:20 for VEX V5 Bootstrapped Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
