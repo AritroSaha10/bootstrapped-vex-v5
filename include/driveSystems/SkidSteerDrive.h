@@ -46,15 +46,30 @@ class SkidSteerDrive : public Drivetrain {
 
         /**
         * Drive robot in arcade drive controller layout
-        * @param forward Speed provided to move the chassis forward, in range [-127, 127]
+        * @param forwardSpeed Speed provided to move the chassis forward, in range [-127, 127]
         * @param yaw Speed provided to turn the chassis, in range [-127, 127]
         * @param threshold Threshold of value before rounding to 0
         */
         void arcade(double forwardSpeed, double yaw, double threshold = 0) override;
     
     private:
-        pros::Motor *tLeft; // Top left motor
-        pros::Motor *tRight; // Top right motor      
-        pros::Motor *bLeft; // Bottom left motor
-        pros::Motor *bRight; // Bottom right motor
+        /**
+         * The top left motor of the drivetrain
+        */
+        pros::Motor *tLeft;
+
+        /**
+         * The top right motor of the drivetrain
+        */
+        pros::Motor *tRight;
+
+        /**
+         * The bottom left motor of the drivetrain
+        */     
+        pros::Motor *bLeft;
+
+        /**
+         * The bottom right motor of the drivetrain
+        */
+        pros::Motor *bRight;
 };

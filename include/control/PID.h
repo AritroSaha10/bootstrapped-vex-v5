@@ -11,15 +11,26 @@
 */
 class PIDInfo {
     public:
-        double p; // Proportional constant
-        double i; // Integral constant
-        double d; // Derivative constant
+        /**
+         * The proportional gain
+        */
+        double p;
+
+        /**
+         * The integral gain
+        */
+        double i;
+
+        /**
+         * The derivative gain
+        */
+        double d;
 
         /**
          * Initializes the PIDInfo class with preloaded constants
-         * @param p Proportional constant
-         * @param i Integral constant
-         * @param d Derivative constant
+         * @param p Proportional gain
+         * @param i Integral gain
+         * @param d Derivative gain
         */
         PIDInfo(double p, double i, double d);
 
@@ -58,21 +69,32 @@ class PIDController {
          * @param target Current target
          * @param constants PID gain constants in PIDInfo form
          * @param tolerance Tolerance value for error until controller settles
-         * @param bRight Integral tolerance value for integral threshold
+         * @param integralTolerance Integral tolerance value for integral threshold
         */
         PIDController(double target, PIDInfo constants, double tolerance, double integralTolerance);
 
         /**
          * Run a step of PID calculations given new sensor data
          * @param newSense New sensor data
+         * @return New speed after running calculations 
         */
         double step(double newSense);
-        // Reset PID controller values
+
+        /**
+         * Reset all PID controller values back to their defaults
+        */
         void reset(); 
 
-        // Get the current error of the controller
-        double getError(); 
-        // Check if the controller is settled
+        /**
+         * Get the error value
+         * @return The current error, aka target - sensor value
+        */
+        double getError();
+
+        /**
+         * Check whether controller is settled or not
+         * @return Controller's settled state as boolean
+        */
         bool isSettled(); 
 };
 

@@ -31,32 +31,64 @@ class Vector2 {
         */
         Vector2(double x, double y);
 
-        // Initializes the Vector2 class
+        /**
+         * Initializes the Vector2 class with default values (0, 0)
+        */
         Vector2();
 
-        // Returns the x value of the vector
+
+        /**
+         * Returns the x value of the vector
+        */
         double getX() { return this->x; };
-        // Returns the y value of the vector
+
+        /**
+         * Returns the y value of the vector
+        */
         double getY() { return this->y; };
 
-        // Returns the magnitude of the vector
+
+        /**
+         * Returns the magnitude of the vector
+        */
         double getMagnitude();
-        // Returns the angle of the vector
+
+        /**
+         * Returns the angle of the vector
+        */
         double getAngle();
 
-        // Normalizes vector
+
+        /**
+         * Normalize the vector (change the length of the vector to 1 while retaining the direction)
+         * @return Normalized version of the vector
+        */
         Vector2 normalize(); 
 
         // Arithmetic functions
 
-        // Vector addition
+        /**
+         * Simple vector addition
+        */
         friend Vector2 operator+(const Vector2 &v1, const Vector2 &v2);
-        // Vector subtraction
+        /**
+         * Simple vector subtraction
+        */
         friend Vector2 operator-(const Vector2 &v1, const Vector2 &v2);
-        // Scalar multiplication of vector 
+        /**
+         * Scalar and vector multiplication
+        */
         friend Vector2 operator*(const Vector2 &v1, const double scalar);
+    
     private:
-        double x, y;
+        /**
+         * The x value of the vector
+        */
+        double x;
+        /**
+         * The y value of the vector
+        */
+        double y;
 };
 
 /**
@@ -72,12 +104,21 @@ class TrackingData {
         */
         TrackingData(double x, double y, double h);
 
-        // Return heading
+        /**
+         * Get the heading angle of the current tracking data
+         * @return The heading angle of the robot
+        */
         double getHeading(); 
 
-        // Return position in Vector2 form
+        /**
+         * Get the position
+         * @return Robot position as Vector2
+        */
         Vector2 getPos(); 
-        // Return the forward in Vec2 form
+        /**
+         * Get the forward of the robot
+         * @return Robot forward as Vector2
+        */
         Vector2 getForward(); 
 
         /**
@@ -96,7 +137,13 @@ class TrackingData {
         void update(Vector2 newPos, double newH);
 
     private:
+        /**
+         * Current position of the robot represented as a Vector2 (units: ft)
+        */
         Vector2 pos;
+        /**
+         * Current heading (angle) of the robot
+        */
         double heading;
 };
 

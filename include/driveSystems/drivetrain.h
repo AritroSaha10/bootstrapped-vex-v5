@@ -40,7 +40,7 @@ class Drivetrain {
 
         /**
         * Drive robot in arcade drive controller layout
-        * @param forward Speed provided to move the chassis forward, in range [-127, 127]
+        * @param forwardSpeed Speed provided to move the chassis forward, in range [-127, 127]
         * @param yaw Speed provided to turn the chassis, in range [-127, 127]
         * @param threshold Threshold of value before rounding to 0
         */
