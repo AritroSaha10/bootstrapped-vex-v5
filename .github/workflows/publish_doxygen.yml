@@ -28,7 +28,7 @@ jobs:
         uses: mattnotmitt/doxygen-action@v1
       
       - name: Run ls
-        run: ls
+        run: ls doxygen-awesome-css
       
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
