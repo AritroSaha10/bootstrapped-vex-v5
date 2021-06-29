@@ -1,9 +1,12 @@
 var class_drivetrain_p_i_d =
 [
-    [ "DrivetrainPID", "class_drivetrain_p_i_d.html#af934b7b6251d48dc0322244e1728da1d", null ],
-    [ "isSettled", "class_drivetrain_p_i_d.html#a4f1a03e3a4b767b2f18eea77cf3c808c", null ],
-    [ "move", "class_drivetrain_p_i_d.html#ac55d9d4f419c45340586e4e1dcbf0b0e", null ],
-    [ "moveTo", "class_drivetrain_p_i_d.html#a990ce1e9903ed79d4824eada00847a07", null ],
-    [ "rotate", "class_drivetrain_p_i_d.html#aa8fd990bf19bcdc6f1284aa4257071dd", null ],
-    [ "rotateTo", "class_drivetrain_p_i_d.html#ae2033c1719cfb7d4ae7dacb0236735ed", null ]
+    [ "DrivetrainPID", "class_drivetrain_p_i_d.html#a8be9fe371e6cb41df56ab181657aed09", null ],
+    [ "~DrivetrainPID", "class_drivetrain_p_i_d.html#aa082af05a9e58ac7519e0351cc70f441", null ],
+    [ "getDriveController", "class_drivetrain_p_i_d.html#a7473ac8518fe003e0f05ca11380502f3", null ],
+    [ "getTurnController", "class_drivetrain_p_i_d.html#a0f6155f37a0ef28ceb1f471646663378", null ],
+    [ "move", "class_drivetrain_p_i_d.html#a1cfd65ef0ba6c56fc67db76ffaa40081", null ],
+    [ "moveRelative", "class_drivetrain_p_i_d.html#a074fc014ef92c0796d09fcc65a062379", null ],
+    [ "moveToOrientation", "class_drivetrain_p_i_d.html#ada2c1e15f842228323f177d2111d6ed1", null ],
+    [ "moveToPoint", "class_drivetrain_p_i_d.html#aa7e0151ffc88f56144403e0ff1d457d9", null ],
+    [ "rotateTo", "class_drivetrain_p_i_d.html#aa531cedb4d4db338b0a27b7985225d58", null ]
 ];

@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="class_drivetrain.html#abfcc3eea7516b5f76422d39676adbd27">Drivetrain</a>
 </li>
 <li>DrivetrainPID()
-: <a class="el" href="class_drivetrain_p_i_d.html#af934b7b6251d48dc0322244e1728da1d">DrivetrainPID</a>
+: <a class="el" href="class_drivetrain_p_i_d.html#a8be9fe371e6cb41df56ab181657aed09">DrivetrainPID</a>
 </li>
 </ul>
 
@@ -117,6 +117,9 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>getAngle()
 : <a class="el" href="class_vector2.html#a847501d0d32dd2524bccf501100bf24e">Vector2</a>
 </li>
+<li>getDriveController()
+: <a class="el" href="class_drivetrain_p_i_d.html#a7473ac8518fe003e0f05ca11380502f3">DrivetrainPID</a>
+</li>
 <li>getError()
 : <a class="el" href="class_p_i_d_controller.html#a6e38a2b2037bec7cd522b1c4cde86f97">PIDController</a>
 </li>
@@ -132,6 +135,9 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>getPos()
 : <a class="el" href="class_tracking_data.html#a5ae18e38925c5cd84a625cd695578fe4">TrackingData</a>
 </li>
+<li>getTurnController()
+: <a class="el" href="class_drivetrain_p_i_d.html#a0f6155f37a0ef28ceb1f471646663378">DrivetrainPID</a>
+</li>
 <li>getX()
 : <a class="el" href="class_vector2.html#ab2eb904786e8dfaf515a6547a95d82e3">Vector2</a>
 </li>
@@ -143,18 +149,23 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 
 <h3><a id="index_i"></a>- i -</h3><ul>
 <li>isSettled()
-: <a class="el" href="class_drivetrain_p_i_d.html#a4f1a03e3a4b767b2f18eea77cf3c808c">DrivetrainPID</a>
-, <a class="el" href="class_p_i_d_controller.html#ae7b3615c00bfb5e7a98bf61b029a4929">PIDController</a>
+: <a class="el" href="class_p_i_d_controller.html#ae7b3615c00bfb5e7a98bf61b029a4929">PIDController</a>
 </li>
 </ul>
 
 
 <h3><a id="index_m"></a>- m -</h3><ul>
 <li>move()
-: <a class="el" href="class_drivetrain_p_i_d.html#ac55d9d4f419c45340586e4e1dcbf0b0e">DrivetrainPID</a>
+: <a class="el" href="class_drivetrain_p_i_d.html#a1cfd65ef0ba6c56fc67db76ffaa40081">DrivetrainPID</a>
 </li>
-<li>moveTo()
-: <a class="el" href="class_drivetrain_p_i_d.html#a990ce1e9903ed79d4824eada00847a07">DrivetrainPID</a>
+<li>moveRelative()
+: <a class="el" href="class_drivetrain_p_i_d.html#a074fc014ef92c0796d09fcc65a062379">DrivetrainPID</a>
+</li>
+<li>moveToOrientation()
+: <a class="el" href="class_drivetrain_p_i_d.html#ada2c1e15f842228323f177d2111d6ed1">DrivetrainPID</a>
+</li>
+<li>moveToPoint()
+: <a class="el" href="class_drivetrain_p_i_d.html#aa7e0151ffc88f56144403e0ff1d457d9">DrivetrainPID</a>
 </li>
 </ul>
 
@@ -182,11 +193,10 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 </li>
 <li>rotate()
 : <a class="el" href="class_drivetrain.html#a76750a9f97765ca61b19bb35d741c8cf">Drivetrain</a>
-, <a class="el" href="class_drivetrain_p_i_d.html#aa8fd990bf19bcdc6f1284aa4257071dd">DrivetrainPID</a>
 , <a class="el" href="class_skid_steer_drive.html#a03934c875306951e9378b950a38a2232">SkidSteerDrive</a>
 </li>
 <li>rotateTo()
-: <a class="el" href="class_drivetrain_p_i_d.html#ae2033c1719cfb7d4ae7dacb0236735ed">DrivetrainPID</a>
+: <a class="el" href="class_drivetrain_p_i_d.html#aa531cedb4d4db338b0a27b7985225d58">DrivetrainPID</a>
 </li>
 </ul>
 
@@ -228,12 +238,19 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 : <a class="el" href="class_vector2.html#a695ccc36d26cb5f950ed47bfc4e6cfe1">Vector2</a>
 </li>
 </ul>
+
+
+<h3><a id="index__7E"></a>- ~ -</h3><ul>
+<li>~DrivetrainPID()
+: <a class="el" href="class_drivetrain_p_i_d.html#aa082af05a9e58ac7519e0351cc70f441">DrivetrainPID</a>
+</li>
+</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Jun 29 2021 18:03:42 for VEX V5 Bootstrapped Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Tue Jun 29 2021 19:37:00 for VEX V5 Bootstrapped Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
