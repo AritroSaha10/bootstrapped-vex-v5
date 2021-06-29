@@ -23,7 +23,7 @@ extern pros::ADIEncoder rEnc; // Right encoder
 
 
 // Drivetrain
-extern SkidSteerDrive driveTrain;
+extern SkidSteerDrive* driveTrain;
 extern DrivetrainPID driveTrainPID;
 
 // Odometry tracking

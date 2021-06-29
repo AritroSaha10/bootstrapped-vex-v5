@@ -1,3 +1,5 @@
 #include "globals.h"
+#include "chassis.h"
 
-SkidSteerDrive driveTrain(&tLeft, &tRight, &bLeft, &bRight);
+SkidSteerDrive* driveTrain = new SkidSteerDrive(&tLeft, &tRight, &bLeft, &bRight);
+DrivetrainPID driveTrainPID(driveTrain, driveConstants, turnConstants, 1, 1);

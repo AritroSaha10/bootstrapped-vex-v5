@@ -3,6 +3,12 @@
  * Add chassis code to allow for simple control
 */
 
+#include "driveSystems/drivetrainPID.h"
+
+// PID Gain Constants
+PIDInfo driveConstants(1, 1, 1);
+PIDInfo turnConstants(1, 1, 1);
+
 // Motor pin numbers
 #define TL_PORT 1
 #define TR_PORT 2
