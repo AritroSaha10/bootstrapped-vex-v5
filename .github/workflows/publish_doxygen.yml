@@ -26,6 +26,8 @@ jobs:
       # Build docs using doxygen-action
       - name: Build docs
         uses: mattnotmitt/doxygen-action@v1
+        with:
+          fetch-depth: 1
       
       - name: Run ls
         run: ls doxygen-awesome-css
