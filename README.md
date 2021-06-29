@@ -13,16 +13,3 @@ This code is for VEX V5 systems only.
 `prosv5 make clean`
 2. Build the project
 `prosv5 make`
-
-## Goals
-### Currently Implemented
-- CI Build Task
-- Global Classes (Encoders, Tasks, etc)
-- Self-Documentation (Doxygen + Doxygen-Awesome-CSS)
-- PID
-- Odometry
-- Sample Autonomous Code
-
-### TODO
-- State Machines Template
-- Display Controller
