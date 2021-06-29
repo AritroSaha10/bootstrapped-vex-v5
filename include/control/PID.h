@@ -63,7 +63,10 @@ class PIDController {
         PIDInfo constants; // PID gain constants
 
     public:
-        double target; // Target value
+        /**
+         * The current target value for the controller
+        */
+        double target;
         
         /**
          * Initializes the PID Controller with preloaded values

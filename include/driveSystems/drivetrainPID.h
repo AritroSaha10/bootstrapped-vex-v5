@@ -13,6 +13,10 @@ class DrivetrainPID {
         /**
          * Initializes the Drivetrain class
          * @param drivetrain The type of drivetrain (ex. SkidSteerDrive) used
+         * @param driveConstants The PID gain constants for the drive PID controller
+         * @param turnConstants The PID gain constants for the turn PID controller
+         * @param tolerance The tolerance for both PID controllers before it can be considered settled
+         * @param integralTolerance The threshold at which the integral will be used or not
         */
         DrivetrainPID(Drivetrain* drivetrain, PIDInfo driveConstants, PIDInfo turnConstants, double tolerance, double integralTolerance);
 
