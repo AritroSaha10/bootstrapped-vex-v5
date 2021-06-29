@@ -1,4 +1,5 @@
 #include "main.h"
+#include "tracking.h"
 
 /**
  * A callback function for LLEMU's center button.
@@ -27,6 +28,9 @@ void initialize() {
 	pros::lcd::set_text(1, "Hello PROS User!");
 
 	pros::lcd::register_btn1_cb(on_center_button);
+
+	// Start tracking task
+	pros::Task trackingTask(tracking, NULL, "Tracking");
 }
 
 /**
