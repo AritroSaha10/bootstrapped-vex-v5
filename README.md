@@ -1,7 +1,21 @@
 # Bootstrapped VEX Pros V5 Project
 A VEX Pros V5 project that serves as a base project with common algorithms and control systems implemented, such as odometry, PID, and more.
 
-## Currently Implemented
+[![CI](https://github.com/AritroSaha10/bootstrapped-vex-v5/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/AritroSaha10/bootstrapped-vex-v5/actions/workflows/main.yml)
+
+[![Publish Doxygen Docs](https://github.com/AritroSaha10/bootstrapped-vex-v5/actions/workflows/publish_doxygen.yml/badge.svg?branch=master)](https://github.com/AritroSaha10/bootstrapped-vex-v5/actions/workflows/publish_doxygen.yml)
+
+## Platform
+This code is for VEX V5 systems only.
+
+## Compilation
+1. Clean the binaries if any headers have been changed  
+`prosv5 make clean`
+2. Build the project
+`prosv5 make`
+
+## Goals
+### Currently Implemented
 - CI Build Task
 - Global Classes (Encoders, Tasks, etc)
 - Self-Documentation (Doxygen + Doxygen-Awesome-CSS)
@@ -9,6 +23,6 @@ A VEX Pros V5 project that serves as a base project with common algorithms and c
 - Odometry
 - Sample Autonomous Code
 
-## TODO
+### TODO
 - State Machines Template
 - Display Controller
