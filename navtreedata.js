@@ -26,8 +26,9 @@ var NAVTREE =
 [
   [ "VEX V5 Bootstrapped Project", "index.html", [
     [ "Bootstrapped VEX Pros V5 Project", "index.html", [
-      [ "Platform", "index.html#autotoc_md1", null ],
-      [ "Compilation", "index.html#autotoc_md2", null ]
+      [ "Documentation", "index.html#autotoc_md1", null ],
+      [ "Platform", "index.html#autotoc_md2", null ],
+      [ "Compilation", "index.html#autotoc_md3", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
