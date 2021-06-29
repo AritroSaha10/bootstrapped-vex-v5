@@ -7,10 +7,8 @@ A VEX Pros V5 project that serves as a base project with common algorithms and c
 - Self-Documentation (Doxygen + Doxygen-Awesome-CSS)
 - PID
 - Odometry
+- Sample Autonomous Code
 
 ## TODO
-- Pure Pursuit?
 - State Machines Template
-- Sample OPControl Code
-- Sample Autonomous Code
 - Display Controller
