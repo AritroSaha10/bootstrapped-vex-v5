@@ -17,7 +17,7 @@ double radToDeg(double r);
  * Converts degrees to radians
  * @param r Degrees unit to convert
 */
-double degToRad(double r);
+double degToRad(double d);
 
 /**
  * Class object to represent a vector within a 2 dimensional space
@@ -31,21 +31,30 @@ class Vector2 {
         */
         Vector2(double x, double y);
 
-        Vector2(); // Initializes the Vector2 class
+        // Initializes the Vector2 class
+        Vector2();
 
-        double getX(); // Returns the x value of the vector
-        double getY(); // Returns the y value of the vector
+        // Returns the x value of the vector
+        double getX() { return this->x; };
+        // Returns the y value of the vector
+        double getY() { return this->y; };
 
-        double getMagnitude(); // Returns the magnitude of the vector
-        double getAngle(); // Returns the angle of the vector
+        // Returns the magnitude of the vector
+        double getMagnitude();
+        // Returns the angle of the vector
+        double getAngle();
 
-        Vector2 normalize(); // Normalizes vector
+        // Normalizes vector
+        Vector2 normalize(); 
 
         // Arithmetic functions
 
-        friend Vector2 operator+(const Vector2 &v1, const Vector2 &v2); // Vector addition
-        friend Vector2 operator-(const Vector2 &v1, const Vector2 &v2); // Vector subtraction
-        friend Vector2 operator*(const Vector2 &v1, double scalar); // Scalar multiplication of vector
+        // Vector addition
+        friend Vector2 operator+(const Vector2 &v1, const Vector2 &v2);
+        // Vector subtraction
+        friend Vector2 operator-(const Vector2 &v1, const Vector2 &v2);
+        // Scalar multiplication of vector 
+        friend Vector2 operator*(const Vector2 &v1, const double scalar);
     private:
         double x, y;
 };
@@ -59,18 +68,17 @@ class TrackingData {
          * Initializes the TrackingData class with preloaded location and heading values
          * @param x x value of the location
          * @param y y value of the location
-         * @param h heading value of the location
+         * @param h heading value
         */
         TrackingData(double x, double y, double h);
 
-        //! Are these necessary if we can just return the vec?
+        // Return heading
+        double getHeading(); 
 
-        double getX(); // Return x value of position
-        double getY(); // Return y value of position
-        double getHeading(); // Return heading
-
-        Vector2 getPos(); // Return position in Vector2 form
-        Vector2 getForward(); // Return the forward in Vec2 form
+        // Return position in Vector2 form
+        Vector2 getPos(); 
+        // Return the forward in Vec2 form
+        Vector2 getForward(); 
 
         /**
          * Update the tracking data given position and heading values
@@ -97,19 +105,19 @@ class TrackingData {
  * @param vec Vector to rotate
  * @param r Angle to rotate by
 */
-double rotateVector(Vector2 &vec, double angle);
+Vector2 rotateVector(Vector2 vec, double angle);
 
 /**
  * Convert vector to local coordinates
  * @param r Vector to convert
 */
-double toLocalCoordinates(Vector2 &vec);
+Vector2 toLocalCoordinates(Vector2 vec);
 
 /**
  * Convert vector to global coordinates
  * @param r Vector to convert
 */
-double toGlobalCoordinates(Vector2 &vec);
+Vector2 toGlobalCoordinates(Vector2 vec);
 
 /**
  * Main robot tracking function, runs as a PROs task

@@ -3,6 +3,7 @@
 #include "main.h"
 #include "driveSystems/SkidSteerDrive.h"
 #include "driveSystems/drivetrainPID.h"
+#include "tracking.h"
 
 // Motors
 
@@ -24,3 +25,6 @@ extern pros::ADIEncoder rEnc; // Right encoder
 // Drivetrain
 extern SkidSteerDrive driveTrain;
 extern DrivetrainPID driveTrainPID;
+
+// Odometry tracking
+extern TrackingData trackingData;
