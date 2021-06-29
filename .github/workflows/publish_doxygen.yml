@@ -22,12 +22,12 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+        with:
+          fetch-depth: 1
+      
       # Build docs using doxygen-action
       - name: Build docs
         uses: mattnotmitt/doxygen-action@v1
-        with:
-          fetch-depth: 1
       
       - name: Run ls
         run: ls doxygen-awesome-css
