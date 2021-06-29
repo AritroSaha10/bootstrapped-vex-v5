@@ -1,3 +1,10 @@
+/**
+ * \file chassis.h
+ * 
+ * Contains definition macros such as pin numbers for a variety of
+ * components (ex. motors, encoders) and dimensions.
+*/
+
 #pragma once
 
 #include "driveSystems/drivetrainPID.h"

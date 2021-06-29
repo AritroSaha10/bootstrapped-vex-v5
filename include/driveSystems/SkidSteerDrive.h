@@ -1,3 +1,10 @@
+/**
+ * \file SkidSteerDrive.h
+ * 
+ * Contains headers for the SkidSteerDrive class, which inherits from 
+ * the Drivetrain class. 
+*/
+
 #pragma once
 
 #include "main.h"

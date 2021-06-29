@@ -1,3 +1,9 @@
+/**
+ * \file drivetrain.h
+ * 
+ * Contains headers for the Drivetrain abstract class.
+*/
+
 #pragma once
 
 #include "main.h"

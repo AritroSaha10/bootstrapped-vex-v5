@@ -1,4 +1,6 @@
 /**
+ * \file tracking.h
+ * 
  * Tracking code to track the robots location and rotation on the 
  * field. Utilizes algorithm documented in "Introduction to Position Tracking" 
  * by the E-Bots Pilons, found here: https://thepilons.ca/wp-content/uploads/2018/10/Tracking.pdf

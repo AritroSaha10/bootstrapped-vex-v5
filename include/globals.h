@@ -1,3 +1,10 @@
+/**
+ * \file globals.h
+ * 
+ * Contains global variables such as motors and encoders 
+ * that are used throughout the project
+*/
+
 #pragma once
 
 #include "main.h"

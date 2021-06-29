@@ -1,6 +1,7 @@
 /**
- * Controller code for control loop using PID to accurately 
- * reach a target
+ * \file PID.h
+ * 
+ * Contains classes (PIDInfo, PIDController) required for a PID control loop
 */
 
 #ifndef _PID_H_

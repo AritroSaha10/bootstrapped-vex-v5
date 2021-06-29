@@ -1,3 +1,10 @@
+/**
+ * \file drivetrainPID.h
+ * 
+ * Contains headers for the Drivetrain PID class which serves as 
+ * a wrapper class on top of the Drivetrain class to use PID + Odometry.
+*/
+
 #pragma once
 
 #include "main.h"
