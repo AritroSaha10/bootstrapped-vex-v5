@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['opcontrol_36',['opcontrol',['../main_8h.html#a1903abdb5ef0f301d660754c8315fc17',1,'main.cpp']]],
-  ['operator_2a_37',['operator*',['../class_vector2.html#a9b046398cf70251b0e1aaecf7d43ca51',1,'Vector2']]],
-  ['operator_2b_38',['operator+',['../class_vector2.html#a63e74f57546a0537d6fc8eed7ea1ddc9',1,'Vector2']]],
-  ['operator_2d_39',['operator-',['../class_vector2.html#a0feca9ade3edd654f44ab6073ba3f15f',1,'Vector2']]]
+  ['main_2eh_40',['main.h',['../main_8h.html',1,'']]],
+  ['move_41',['move',['../class_drivetrain_p_i_d.html#a1cfd65ef0ba6c56fc67db76ffaa40081',1,'DrivetrainPID']]],
+  ['moverelative_42',['moveRelative',['../class_drivetrain_p_i_d.html#a074fc014ef92c0796d09fcc65a062379',1,'DrivetrainPID']]],
+  ['movetoorientation_43',['moveToOrientation',['../class_drivetrain_p_i_d.html#ada2c1e15f842228323f177d2111d6ed1',1,'DrivetrainPID']]],
+  ['movetopoint_44',['moveToPoint',['../class_drivetrain_p_i_d.html#aa7e0151ffc88f56144403e0ff1d457d9',1,'DrivetrainPID']]],
+  ['myauton_45',['myAuton',['../main_8h.html#a25f3328645df9a04d92783af2e42fa6c',1,'autonomous.cpp']]],
+  ['myopcontrol_46',['myOpControl',['../main_8h.html#ae8f6386da0aafd1afff03d14121a03a0',1,'opcontrol.cpp']]]
 ];

@@ -5,6 +5,7 @@ var annotated_dup =
     [ "PIDController", "class_p_i_d_controller.html", "class_p_i_d_controller" ],
     [ "PIDInfo", "class_p_i_d_info.html", "class_p_i_d_info" ],
     [ "SkidSteerDrive", "class_skid_steer_drive.html", "class_skid_steer_drive" ],
+    [ "SystemManager", "class_system_manager.html", "class_system_manager" ],
     [ "TrackingData", "class_tracking_data.html", "class_tracking_data" ],
     [ "Vector2", "class_vector2.html", "class_vector2" ]
 ];

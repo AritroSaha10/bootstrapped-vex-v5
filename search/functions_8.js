@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['opcontrol_108',['opcontrol',['../main_8h.html#a1903abdb5ef0f301d660754c8315fc17',1,'main.cpp']]]
+  ['normalize_140',['normalize',['../class_vector2.html#abf921b268aff0012ec9b435fc35ad66a',1,'Vector2']]]
 ];

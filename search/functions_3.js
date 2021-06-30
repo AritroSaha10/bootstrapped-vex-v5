@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['forward_88',['forward',['../class_drivetrain.html#a042742ea8d9af12f562be9f922e45216',1,'Drivetrain::forward()'],['../class_skid_steer_drive.html#a67e4127f4fe1f5c72506e12f83d6b5b0',1,'SkidSteerDrive::forward()']]]
+  ['enable_114',['enable',['../class_system_manager.html#af6c530e38bc2b0b28bbf32499eb475b7',1,'SystemManager']]],
+  ['enabled_115',['enabled',['../class_system_manager.html#a250c53d4af50b451db44ad2a44b96447',1,'SystemManager']]]
 ];

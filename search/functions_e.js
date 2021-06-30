@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vector2_125',['Vector2',['../class_vector2.html#a695ccc36d26cb5f950ed47bfc4e6cfe1',1,'Vector2::Vector2(double x, double y)'],['../class_vector2.html#a22104d1809be26a419ef1f959e3761bf',1,'Vector2::Vector2()']]]
+  ['update_161',['update',['../class_system_manager.html#abd340a8f0955f136d5ee14bc5c4bfee1',1,'SystemManager::update()'],['../class_tracking_data.html#a9b133e4fe9976382df7cb2adedba1a4f',1,'TrackingData::update(double newX, double newY, double newH)'],['../class_tracking_data.html#a5a31e435bbcb11e1ae2f95e7f4489e2e',1,'TrackingData::update(Vector2 newPos, double newH)']]]
 ];

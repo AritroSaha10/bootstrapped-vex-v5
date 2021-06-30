@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pidcontroller_109',['PIDController',['../class_p_i_d_controller.html#a6c518dba9714973d9e10baf123d92eb7',1,'PIDController']]],
-  ['pidinfo_110',['PIDInfo',['../class_p_i_d_info.html#acb32ee08e342487aaf46fe8f4cf58dd7',1,'PIDInfo::PIDInfo(double p, double i, double d)'],['../class_p_i_d_info.html#a28980929d2638d7be9f696cc53b1495f',1,'PIDInfo::PIDInfo()']]]
+  ['opcontrol_141',['opcontrol',['../main_8h.html#a1903abdb5ef0f301d660754c8315fc17',1,'main.cpp']]],
+  ['operator_3d_142',['operator=',['../class_system_manager.html#a9139ac23ca89964dcc740f2e49516698',1,'SystemManager']]]
 ];

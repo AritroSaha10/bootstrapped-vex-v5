@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7edrivetrainpid_126',['~DrivetrainPID',['../class_drivetrain_p_i_d.html#aa082af05a9e58ac7519e0351cc70f441',1,'DrivetrainPID']]]
+  ['vector2_162',['Vector2',['../class_vector2.html#a695ccc36d26cb5f950ed47bfc4e6cfe1',1,'Vector2::Vector2(double x, double y)'],['../class_vector2.html#a22104d1809be26a419ef1f959e3761bf',1,'Vector2::Vector2()']]]
 ];

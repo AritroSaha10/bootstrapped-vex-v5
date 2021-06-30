@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['radtodeg_46',['radToDeg',['../tracking_8h.html#a169dc5ee713c133d690b588159903f70',1,'util.cpp']]],
-  ['reset_47',['reset',['../class_p_i_d_controller.html#ab6adfbffa30414f0a83b95ba999a2fea',1,'PIDController']]],
-  ['rotate_48',['rotate',['../class_drivetrain.html#a76750a9f97765ca61b19bb35d741c8cf',1,'Drivetrain::rotate()'],['../class_skid_steer_drive.html#a03934c875306951e9378b950a38a2232',1,'SkidSteerDrive::rotate()']]],
-  ['rotateto_49',['rotateTo',['../class_drivetrain_p_i_d.html#aa531cedb4d4db338b0a27b7985225d58',1,'DrivetrainPID']]],
-  ['rotatevector_50',['rotateVector',['../tracking_8h.html#a687d576e8a1282fde1ca01ecbd7acd4e',1,'util.cpp']]]
+  ['opcontrol_48',['opcontrol',['../main_8h.html#a1903abdb5ef0f301d660754c8315fc17',1,'main.cpp']]],
+  ['operator_2a_49',['operator*',['../class_vector2.html#a9b046398cf70251b0e1aaecf7d43ca51',1,'Vector2']]],
+  ['operator_2b_50',['operator+',['../class_vector2.html#a63e74f57546a0537d6fc8eed7ea1ddc9',1,'Vector2']]],
+  ['operator_2d_51',['operator-',['../class_vector2.html#a0feca9ade3edd654f44ab6073ba3f15f',1,'Vector2']]],
+  ['operator_3d_52',['operator=',['../class_system_manager.html#a9139ac23ca89964dcc740f2e49516698',1,'SystemManager']]]
 ];
