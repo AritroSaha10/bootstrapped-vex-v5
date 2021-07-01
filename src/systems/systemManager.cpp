@@ -51,7 +51,7 @@ bool SystemManager::changeState(STATE newState) {
 }
 
 bool SystemManager::operator=(STATE newState) {
-    this->changeState(newState);
+    return this->changeState(newState);
 }
 
 bool SystemManager::timedOut(uint32_t timeout) {

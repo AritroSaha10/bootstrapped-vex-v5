@@ -17,7 +17,7 @@ class SystemManager {
         /**
          * All possible states for the system.
         */
-        static const enum STATE {
+        enum STATE {
             DISABLED_STATE = (uint8_t) 0x00,
             RESET_STATE = (uint8_t) 0x01,
             OPERATOR_OVERRIDE = (uint8_t) 0x20
