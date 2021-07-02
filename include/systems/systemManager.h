@@ -1,15 +1,14 @@
 /**
  * \file systemManager.h
  * 
- * Contains headers for the SystemManager abstract class.
+ * \brief Contains headers for the SystemManager abstract class.
 */
 
 #pragma once
 #include "main.h"
 
 /**
- * Base class for a system manager. 
- * This should not be used in normal code, please use the derrived classes.
+ * \brief Base class for a system manager. 
 */
 class SystemManager {
     public:

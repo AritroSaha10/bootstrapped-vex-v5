@@ -1,14 +1,14 @@
 /**
  * \file PID.h
  * 
- * Contains classes (PIDInfo, PIDController) required for a PID control loop
+ * \brief Contains classes (PIDInfo, PIDController) required for a PID control loop
 */
 
 #ifndef _PID_H_
 #define _PID_H_
 
 /**
- * Class object to store PID constants
+ * \brief Class object to store PID constants
 */
 class PIDInfo {
     public:
@@ -42,7 +42,7 @@ class PIDInfo {
 };
 
 /**
- * Class object to control a motor using PID
+ * \brief Class object to control a motor using PID
 */
 class PIDController {
     private:

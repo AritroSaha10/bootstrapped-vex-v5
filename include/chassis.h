@@ -1,6 +1,8 @@
 /**
  * \file chassis.h
  * 
+ * \brief Contains definition macros such as pin numbers.
+ * 
  * Contains definition macros such as pin numbers for a variety of
  * components (ex. motors, encoders) and dimensions.
 */

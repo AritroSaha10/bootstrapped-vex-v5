@@ -1,8 +1,7 @@
 /**
  * \file SkidSteerDrive.h
  * 
- * Contains headers for the SkidSteerDrive class, which inherits from 
- * the Drivetrain class. 
+ * \brief Contains headers for the SkidSteerDrive class. 
 */
 
 #pragma once
@@ -11,10 +10,9 @@
 #include "drivetrain.h"
 
 /**
- * Class object to control a nonholomic / "tank drive" robot drivetrain
+ * \brief Class object to control a nonholomic / "tank drive" robot drivetrain
  * Utilizes PID + Odometry
 */
-
 class SkidSteerDrive : public Drivetrain {
     public:
         /**

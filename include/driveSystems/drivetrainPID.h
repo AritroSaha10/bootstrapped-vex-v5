@@ -1,8 +1,7 @@
 /**
  * \file drivetrainPID.h
  * 
- * Contains headers for the Drivetrain PID class which serves as 
- * a wrapper class on top of the Drivetrain class to use PID + Odometry.
+ * \brief Contains headers for the Drivetrain PID class which serves as a wrapper class on top of the Drivetrain class to use PID + Odometry.
 */
 
 #pragma once
@@ -13,7 +12,7 @@
 #include "tracking.h"
 
 /**
- * Wrapper class on top of Drivetrain class to implement PID + Odom on any drivetrain
+ * \brief Wrapper class on top of Drivetrain class to implement PID + Odom on any drivetrain
 */
 class DrivetrainPID {
     public:

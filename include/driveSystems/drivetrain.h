@@ -1,7 +1,7 @@
 /**
  * \file drivetrain.h
  * 
- * Contains headers for the Drivetrain abstract class.
+ * \brief Contains headers for the Drivetrain abstract class.
 */
 
 #pragma once
@@ -9,8 +9,7 @@
 #include "main.h"
 
 /**
- * Base class for different types of drivetrains, ex. holonomic, nonholonomic
- * This should not be used in normal code, please use the derrived classes
+ * \brief Base class for different types of drivetrains, ex. holonomic, nonholonomic
 */
 class Drivetrain {
     public:

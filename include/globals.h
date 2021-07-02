@@ -1,8 +1,10 @@
 /**
  * \file globals.h
  * 
+ * \brief Contains all the global variables used throughout the project.
+ * 
  * Contains global variables such as motors and encoders 
- * that are used throughout the project
+ * that are used throughout the project.
 */
 
 #pragma once

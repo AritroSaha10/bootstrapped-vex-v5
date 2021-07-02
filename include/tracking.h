@@ -1,6 +1,8 @@
 /**
  * \file tracking.h
  * 
+ * \brief Tracking code to track the robots location and rotation on the field.
+ * 
  * Tracking code to track the robots location and rotation on the 
  * field. Utilizes algorithm documented in "Introduction to Position Tracking" 
  * by the E-Bots Pilons, found here: https://thepilons.ca/wp-content/uploads/2018/10/Tracking.pdf
@@ -22,7 +24,7 @@ double radToDeg(double r);
 double degToRad(double d);
 
 /**
- * Class object to represent a vector within a 2 dimensional space
+ * \brief Class object to represent a vector within a 2 dimensional space
 */
 class Vector2 {
     public:
@@ -94,7 +96,7 @@ class Vector2 {
 };
 
 /**
- * Class object to represent the position info of the robot
+ * \brief Class object to represent the position info of the robot
 */
 class TrackingData {
     public:
