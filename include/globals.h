@@ -10,6 +10,7 @@
 #include "main.h"
 #include "driveSystems/SkidSteerDrive.h"
 #include "driveSystems/drivetrainPID.h"
+#include "displayController.h"
 #include "tracking.h"
 
 // Motors
@@ -35,3 +36,6 @@ extern DrivetrainPID driveTrainPID;
 
 // Odometry tracking
 extern TrackingData trackingData;
+
+// Display controller
+extern DisplayController display;

@@ -11,7 +11,6 @@
  * Base class for a system manager. 
  * This should not be used in normal code, please use the derrived classes.
 */
-
 class SystemManager {
     public:
         /**
