@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['radtodeg_145',['radToDeg',['../tracking_8h.html#a169dc5ee713c133d690b588159903f70',1,'util.cpp']]],
-  ['reset_146',['reset',['../class_p_i_d_controller.html#ab6adfbffa30414f0a83b95ba999a2fea',1,'PIDController::reset()'],['../class_system_manager.html#a8ea4ac3b13492e4d6525518b24c11ab2',1,'SystemManager::reset()']]],
-  ['revertstate_147',['revertState',['../class_system_manager.html#ab11f0da7d9d33da0b5b00225f062556f',1,'SystemManager']]],
-  ['rotate_148',['rotate',['../class_drivetrain.html#a76750a9f97765ca61b19bb35d741c8cf',1,'Drivetrain::rotate()'],['../class_skid_steer_drive.html#a03934c875306951e9378b950a38a2232',1,'SkidSteerDrive::rotate()']]],
-  ['rotateto_149',['rotateTo',['../class_drivetrain_p_i_d.html#aa531cedb4d4db338b0a27b7985225d58',1,'DrivetrainPID']]],
-  ['rotatevector_150',['rotateVector',['../tracking_8h.html#a687d576e8a1282fde1ca01ecbd7acd4e',1,'util.cpp']]]
+  ['pcfs_5fclose_179',['pcfs_close',['../sd_read_util_8h.html#a86c5de194b0fd4ecafff57539b938b32',1,'SDReadUtil']]],
+  ['pcfs_5fopen_180',['pcfs_open',['../sd_read_util_8h.html#a52ede4fcd5ae876500323d2f2bf1050f',1,'SDReadUtil']]],
+  ['pcfs_5fread_181',['pcfs_read',['../sd_read_util_8h.html#a49ef2455c4758581cf7d37b8661d4d56',1,'SDReadUtil']]],
+  ['pcfs_5fseek_182',['pcfs_seek',['../sd_read_util_8h.html#a342dad3804b1a6f41ff79bd9558eca2d',1,'SDReadUtil']]],
+  ['pcfs_5ftell_183',['pcfs_tell',['../sd_read_util_8h.html#a374fa59d104914fec90d65b33fc60e79',1,'SDReadUtil']]],
+  ['pidcontroller_184',['PIDController',['../class_p_i_d_controller.html#a6c518dba9714973d9e10baf123d92eb7',1,'PIDController']]],
+  ['pidinfo_185',['PIDInfo',['../class_p_i_d_info.html#acb32ee08e342487aaf46fe8f4cf58dd7',1,'PIDInfo::PIDInfo(double p, double i, double d)'],['../class_p_i_d_info.html#a28980929d2638d7be9f696cc53b1495f',1,'PIDInfo::PIDInfo()']]]
 ];

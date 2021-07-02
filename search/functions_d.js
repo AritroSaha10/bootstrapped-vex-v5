@@ -1,9 +1,10 @@
 var searchData=
 [
-  ['tank_155',['tank',['../class_drivetrain.html#aecf7916ba12fc06e4b5c52097876455e',1,'Drivetrain::tank()'],['../class_skid_steer_drive.html#a615098aca82ab14392fbc649f35a8f16',1,'SkidSteerDrive::tank()']]],
-  ['timedout_156',['timedOut',['../class_system_manager.html#a555f9459e136da217a97a0fa1f926536',1,'SystemManager']]],
-  ['toglobalcoordinates_157',['toGlobalCoordinates',['../tracking_8h.html#a65926f594730c373d1e08b675465e07b',1,'util.cpp']]],
-  ['tolocalcoordinates_158',['toLocalCoordinates',['../tracking_8h.html#ae7a15e553eda3f2b75579c9dcdf69276',1,'util.cpp']]],
-  ['tracking_159',['tracking',['../tracking_8h.html#af84bdd0ecb717e7da53837699a768280',1,'odom.cpp']]],
-  ['trackingdata_160',['TrackingData',['../class_tracking_data.html#adadca9ed8e7c953deb5e8919d3ef99ca',1,'TrackingData']]]
+  ['setautonmode_192',['setAutonMode',['../display_controller_8h.html#a7aaeb6b7150b67a02a1e25f60334fbed',1,'displayController.cpp']]],
+  ['setmode_193',['setMode',['../class_display_controller.html#a1c4f151e8a38e87b950b4c4d247b52b2',1,'DisplayController']]],
+  ['skidsteerdrive_194',['SkidSteerDrive',['../class_skid_steer_drive.html#a8a2f1143661514d95ab09e71d9cea080',1,'SkidSteerDrive']]],
+  ['startdebugmode_195',['startDebugMode',['../class_display_controller.html#ac63fb33746c815bfe1a9dc3a84ee5e3e',1,'DisplayController']]],
+  ['step_196',['step',['../class_p_i_d_controller.html#af3996064bcfa9a70bdf08f2f3ba2445f',1,'PIDController']]],
+  ['stop_197',['stop',['../class_drivetrain.html#a3e5013731c753cc5ec12892f38fb8f12',1,'Drivetrain::stop()'],['../class_skid_steer_drive.html#a205d15fcfa6db054303126f579bf6d43',1,'SkidSteerDrive::stop()']]],
+  ['systemmanager_198',['SystemManager',['../class_system_manager.html#af1388f537e2d034befcd0783ee914c3b',1,'SystemManager']]]
 ];

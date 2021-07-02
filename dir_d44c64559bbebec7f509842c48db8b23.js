@@ -5,7 +5,9 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "systems", "dir_3c04bc290434a2bfff240c0777e37105.html", "dir_3c04bc290434a2bfff240c0777e37105" ],
     [ "api.h", "api_8h.html", "api_8h" ],
     [ "chassis.h", "chassis_8h.html", "chassis_8h" ],
+    [ "displayController.h", "display_controller_8h.html", "display_controller_8h" ],
     [ "globals.h", "globals_8h.html", "globals_8h" ],
     [ "main.h", "main_8h.html", "main_8h" ],
+    [ "sdReadUtil.h", "sd_read_util_8h.html", "sd_read_util_8h" ],
     [ "tracking.h", "tracking_8h.html", "tracking_8h" ]
 ];

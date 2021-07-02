@@ -95,35 +95,41 @@ $(document).ready(function(){initNavTree('globals_8h_source.html',''); initResiz
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="main_8h.html">main.h</a>&quot;</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_skid_steer_drive_8h.html">driveSystems/SkidSteerDrive.h</a>&quot;</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="drivetrain_p_i_d_8h.html">driveSystems/drivetrainPID.h</a>&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="tracking_8h.html">tracking.h</a>&quot;</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// Motors</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// Drivetrain motors</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">extern</span> pros::Motor tLeft; <span class="comment">// Top left motor      </span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">extern</span> pros::Motor tRight; <span class="comment">// Top right motor      </span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">extern</span> pros::Motor bLeft; <span class="comment">// Bottom left motor</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">extern</span> pros::Motor bRight; <span class="comment">// Bottom right motor</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="display_controller_8h.html">displayController.h</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="tracking_8h.html">tracking.h</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// Motors</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// Drivetrain motors</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">extern</span> pros::Motor tLeft; <span class="comment">// Top left motor      </span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">extern</span> pros::Motor tRight; <span class="comment">// Top right motor      </span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">extern</span> pros::Motor bLeft; <span class="comment">// Bottom left motor</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">extern</span> pros::Motor bRight; <span class="comment">// Bottom right motor</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// Encoders</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// Drivetrain encoders</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">extern</span> pros::ADIEncoder bEnc; <span class="comment">// Back encoder</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">extern</span> pros::ADIEncoder lEnc; <span class="comment">// Left encoder</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">extern</span> pros::ADIEncoder rEnc; <span class="comment">// Right encoder</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">// Encoders</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// Drivetrain encoders</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">extern</span> pros::ADIEncoder bEnc; <span class="comment">// Back encoder</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">extern</span> pros::ADIEncoder lEnc; <span class="comment">// Left encoder</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">extern</span> pros::ADIEncoder rEnc; <span class="comment">// Right encoder</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment">// Drivetrain</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">extern</span> <a class="code" href="class_skid_steer_drive.html">SkidSteerDrive</a>* driveTrain;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">extern</span> <a class="code" href="class_drivetrain_p_i_d.html">DrivetrainPID</a> driveTrainPID;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment">// Odometry tracking</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">extern</span> <a class="code" href="class_tracking_data.html">TrackingData</a> trackingData;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// Drivetrain</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">extern</span> <a class="code" href="class_skid_steer_drive.html">SkidSteerDrive</a>* driveTrain;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">extern</span> <a class="code" href="class_drivetrain_p_i_d.html">DrivetrainPID</a> driveTrainPID;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="comment">// Odometry tracking</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">extern</span> <a class="code" href="class_tracking_data.html">TrackingData</a> trackingData;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment">// Display controller</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">extern</span> <a class="code" href="class_display_controller.html">DisplayController</a> display;</div>
 <div class="ttc" id="a_skid_steer_drive_8h_html"><div class="ttname"><a href="_skid_steer_drive_8h.html">SkidSteerDrive.h</a></div></div>
+<div class="ttc" id="aclass_display_controller_html"><div class="ttname"><a href="class_display_controller.html">DisplayController</a></div><div class="ttdoc">The display controller class, which manages the V5 display.</div><div class="ttdef"><b>Definition:</b> displayController.h:94</div></div>
 <div class="ttc" id="aclass_drivetrain_p_i_d_html"><div class="ttname"><a href="class_drivetrain_p_i_d.html">DrivetrainPID</a></div><div class="ttdef"><b>Definition:</b> drivetrainPID.h:18</div></div>
 <div class="ttc" id="aclass_skid_steer_drive_html"><div class="ttname"><a href="class_skid_steer_drive.html">SkidSteerDrive</a></div><div class="ttdef"><b>Definition:</b> SkidSteerDrive.h:18</div></div>
 <div class="ttc" id="aclass_tracking_data_html"><div class="ttname"><a href="class_tracking_data.html">TrackingData</a></div><div class="ttdef"><b>Definition:</b> tracking.h:99</div></div>
+<div class="ttc" id="adisplay_controller_8h_html"><div class="ttname"><a href="display_controller_8h.html">displayController.h</a></div><div class="ttdoc">This file contains the implementation of the DisplayController class.</div></div>
 <div class="ttc" id="adrivetrain_p_i_d_8h_html"><div class="ttname"><a href="drivetrain_p_i_d_8h.html">drivetrainPID.h</a></div></div>
 <div class="ttc" id="amain_8h_html"><div class="ttname"><a href="main_8h.html">main.h</a></div></div>
 <div class="ttc" id="atracking_8h_html"><div class="ttname"><a href="tracking_8h.html">tracking.h</a></div></div>
@@ -133,7 +139,7 @@ $(document).ready(function(){initNavTree('globals_8h_source.html',''); initResiz
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="globals_8h.html">globals.h</a></li>
-    <li class="footer">Generated on Thu Jul 1 2021 01:13:53 for VEX V5 Bootstrapped Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Fri Jul 2 2021 19:58:56 for VEX V5 Bootstrapped Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
