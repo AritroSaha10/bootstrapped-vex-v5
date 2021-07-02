@@ -93,6 +93,9 @@ $(document).ready(function(){initNavTree('class_drivetrain_p_i_d.html',''); init
 </div><!--header-->
 <div class="contents">
 
+<p>Wrapper class on top of <a class="el" href="class_drivetrain.html" title="Base class for different types of drivetrains, ex. holonomic, nonholonomic.">Drivetrain</a> class to implement PID + Odom on any drivetrain.  
+ <a href="class_drivetrain_p_i_d.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="drivetrain_p_i_d_8h_source.html">drivetrainPID.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -117,7 +120,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0f6155f37a0ef28ceb1f471646663378"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Wrapper class on top of <a class="el" href="class_drivetrain.html">Drivetrain</a> class to implement PID + Odom on any drivetrain </p>
+<div class="textblock"><p>Wrapper class on top of <a class="el" href="class_drivetrain.html" title="Base class for different types of drivetrains, ex. holonomic, nonholonomic.">Drivetrain</a> class to implement PID + Odom on any drivetrain. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8be9fe371e6cb41df56ab181657aed09"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8be9fe371e6cb41df56ab181657aed09">&#9670;&nbsp;</a></span>DrivetrainPID()</h2>
@@ -162,9 +165,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Initializes the <a class="el" href="class_drivetrain.html">Drivetrain</a> class </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Initializes the <a class="el" href="class_drivetrain.html" title="Base class for different types of drivetrains, ex. holonomic, nonholonomic.">Drivetrain</a> class </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">drivetrain</td><td>The type of drivetrain (ex. <a class="el" href="class_skid_steer_drive.html">SkidSteerDrive</a>) used </td></tr>
+    <tr><td class="paramname">drivetrain</td><td>The type of drivetrain (ex. <a class="el" href="class_skid_steer_drive.html" title="Class object to control a nonholomic / &quot;tank drive&quot; robot drivetrain Utilizes PID + Odometry.">SkidSteerDrive</a>) used </td></tr>
     <tr><td class="paramname">driveConstants</td><td>The PID gain constants for the drive PID controller </td></tr>
     <tr><td class="paramname">turnConstants</td><td>The PID gain constants for the turn PID controller </td></tr>
     <tr><td class="paramname">tolerance</td><td>The tolerance for both PID controllers before it can be considered settled </td></tr>
@@ -273,7 +276,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Set the velocity based on the current and wanted position and angle </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dir</td><td>The direction as a <a class="el" href="class_vector2.html">Vector2</a> </td></tr>
+    <tr><td class="paramname">dir</td><td>The direction as a <a class="el" href="class_vector2.html" title="Class object to represent a vector within a 2 dimensional space.">Vector2</a> </td></tr>
     <tr><td class="paramname">turn</td><td>The angle in radians </td></tr>
   </table>
   </dd>
@@ -308,7 +311,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Move and turn to a specific point and orientation relative to the bot's current position and orientation </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">offset</td><td>The desired position relative to the robot's current position as a <a class="el" href="class_vector2.html">Vector2</a> </td></tr>
+    <tr><td class="paramname">offset</td><td>The desired position relative to the robot's current position as a <a class="el" href="class_vector2.html" title="Class object to represent a vector within a 2 dimensional space.">Vector2</a> </td></tr>
     <tr><td class="paramname">aOffset</td><td>The desired angle relative to the robot's current orientation in radians </td></tr>
   </table>
   </dd>
@@ -343,7 +346,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Turn to the angle needed to reach a position, drive to the position, and then turn to the desired angle </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">target</td><td>The position to reach as a <a class="el" href="class_vector2.html">Vector2</a> </td></tr>
+    <tr><td class="paramname">target</td><td>The position to reach as a <a class="el" href="class_vector2.html" title="Class object to represent a vector within a 2 dimensional space.">Vector2</a> </td></tr>
     <tr><td class="paramname">angle</td><td>The angle desired at the end of the action in radians </td></tr>
   </table>
   </dd>
@@ -368,7 +371,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Move to a specific point on the field </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">target</td><td>The position to reach as a <a class="el" href="class_vector2.html">Vector2</a> </td></tr>
+    <tr><td class="paramname">target</td><td>The position to reach as a <a class="el" href="class_vector2.html" title="Class object to represent a vector within a 2 dimensional space.">Vector2</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -409,7 +412,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_drivetrain_p_i_d.html">DrivetrainPID</a></li>
-    <li class="footer">Generated on Fri Jul 2 2021 19:58:56 for VEX V5 Bootstrapped Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Fri Jul 2 2021 20:11:19 for VEX V5 Bootstrapped Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>
