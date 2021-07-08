@@ -50,7 +50,7 @@ void tracking(void* parameter) {
     rEnc.reset();
     bEnc.reset();
 
-    // Tracking loop, follows this: http://thepilons.ca/wp-content/uploads/2018/10/Tracking.pdf
+    // Tracking loop
     while (true) {
         Vector2 localPos;
 

@@ -50,19 +50,17 @@ void DrivetrainPID::moveToPoint(Vector2 target) {
     // Turn to angle of point first (important in nonholonomic)
     this->rotateTo(target.getAngle());
 
-    // Start PID control loop
     this->driveController->target = 0; // Set target to 0 as loop will use delta as sense
+
     do {
         Vector2 delta = target - trackingData.getPos();
 
-        // Run a step of PID and get the speed
         // Flip positivity since we're using the delta as the sense
         float vel = -(this->driveController->step(delta.getMagnitude()));
 
         // Rotate the vector to restore direction since it only points left or right as of now
         Vector2 driveVec = rotateVector(Vector2(vel, 0), delta.getAngle());
 
-        // Move to direction
         this->move(driveVec, 0);
 
         pros::delay(20);
@@ -84,7 +82,7 @@ void DrivetrainPID::rotateTo(double target) {
         target = flipAngle(target);
     }
 
-    turnController->target = target; // Set target
+    turnController->target = target;
     do {
         // Run PID step and move to angle
         move(Vector2(), turnController->step(trackingData.getHeading()));

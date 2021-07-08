@@ -41,3 +41,6 @@ extern TrackingData trackingData;
 
 // Display controller
 extern DisplayController display;
+
+// Actual controller
+extern pros::Controller masterController;

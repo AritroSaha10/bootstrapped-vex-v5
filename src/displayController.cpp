@@ -218,32 +218,8 @@ DisplayController::DisplayController() {
     coloredBg = initTheme(10, colors.at("purple"), colors.at("purple"), 0);
 }
 
-lv_obj_t* DisplayController::renderLabel(std::string text, int x, int y, lv_obj_t* host) {
-    lv_obj_t* label = lv_label_create(host, NULL);
-    lv_obj_align(label, host, LV_LABEL_ALIGN_CENTER, x, y); // Align to the center of the parent
-    lv_label_set_text(label, text.c_str()); // Set the text
-
-    return label;
-}
-
-lv_obj_t* DisplayController::renderButton(int id, int x, int y, int width, int height, std::string text, lv_action_t action, lv_style_t *relStyle, lv_obj_t *host) {
-    lv_cont_set_fit(host, false, false); // Disable all fits
-    lv_obj_t* button = lv_btn_create(host, NULL);
-
-    // Set the size and position
-    lv_obj_set_size(button, width, height);
-    lv_obj_set_pos(button, x, y);
-
-    // Set the ID, style, and callback
-    lv_obj_set_free_num(button, id);
-    lv_btn_set_style(button, LV_BTN_STYLE_REL, relStyle);
-    lv_btn_set_action(button, LV_BTN_ACTION_CLICK, action);
-
-    // Set the label for the button
-    lv_obj_t* buttonLabel = renderLabel(text, 0, 0, button);
-    lv_obj_align(buttonLabel, button, LV_ALIGN_CENTER, 0, 0);
-
-    return button;
+DISPLAY_MODE DisplayController::getMode() {
+    return this->mode;
 }
 
 void DisplayController::setMode(DISPLAY_MODE mode) {
@@ -442,6 +418,75 @@ void DisplayController::setMode(DISPLAY_MODE mode) {
             break;
         }
     }
+}
+
+void DisplayController::logMessage(std::string message, LOGGING_LEVEL level) {
+    if (this->mode != DEBUG && level != ERROR) {
+        // Don't log the error if it's not critical and we're not in debug mode
+        return;
+    }
+
+    lv_obj_t* newMsg = lv_list_add(messageList, NULL, message.c_str(), nullButtonCallback);
+
+    lv_style_t messageStyle;
+    switch (level) {
+        case WARNING: {
+            lv_btn_set_style(newMsg, LV_BTN_STYLE_REL, &warningStyle);
+            break;
+        }
+        case ERROR: {
+            lv_btn_set_style(newMsg, LV_BTN_STYLE_REL, &redStyle);
+            break;
+        }
+        default: {
+            lv_btn_set_style(newMsg, LV_BTN_STYLE_REL, &logStyle);
+            break;
+        }
+    }
+
+    logMessages.push_back(newMsg);
+
+    if (logMessages.size() + fixedMessages.size() > maxMessages) {
+        lv_obj_del(logMessages[0]);
+    }
+}
+
+void DisplayController::clearLogs() {
+    for (lv_obj_t* i : logMessages) {
+        lv_obj_del(i);
+    }
+}
+
+void DisplayController::addFixedMessage(std::string format, char type, void* callback) {
+    fixedMessageData.push_back(FixedDebugInfo(format, callback, type));
+}
+
+lv_obj_t* DisplayController::renderButton(int id, int x, int y, int width, int height, std::string text, lv_action_t action, lv_style_t *relStyle, lv_obj_t *host) {
+    lv_cont_set_fit(host, false, false); // Disable all fits
+    lv_obj_t* button = lv_btn_create(host, NULL);
+
+    // Set the size and position
+    lv_obj_set_size(button, width, height);
+    lv_obj_set_pos(button, x, y);
+
+    // Set the ID, style, and callback
+    lv_obj_set_free_num(button, id);
+    lv_btn_set_style(button, LV_BTN_STYLE_REL, relStyle);
+    lv_btn_set_action(button, LV_BTN_ACTION_CLICK, action);
+
+    // Set the label for the button
+    lv_obj_t* buttonLabel = renderLabel(text, 0, 0, button);
+    lv_obj_align(buttonLabel, button, LV_ALIGN_CENTER, 0, 0);
+
+    return button;
+}
+
+lv_obj_t* DisplayController::renderLabel(std::string text, int x, int y, lv_obj_t* host) {
+    lv_obj_t* label = lv_label_create(host, NULL);
+    lv_obj_align(label, host, LV_LABEL_ALIGN_CENTER, x, y); // Align to the center of the parent
+    lv_label_set_text(label, text.c_str()); // Set the text
+
+    return label;
 }
 
 lv_theme_t* DisplayController::initTheme(int hue, lv_color_t borderColor, lv_color_t mainColor, int borderWidth) {

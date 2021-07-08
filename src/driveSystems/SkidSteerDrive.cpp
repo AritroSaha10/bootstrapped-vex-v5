@@ -11,7 +11,6 @@ SkidSteerDrive::SkidSteerDrive(pros::Motor *tLeft, pros::Motor *tRight, pros::Mo
 }
 
 void SkidSteerDrive::forward(double speed) {
-    // Set voltage of all motors to speed
     this->tLeft->move(speed);
     this->tRight->move(speed);
     this->bLeft->move(speed);
@@ -19,17 +18,14 @@ void SkidSteerDrive::forward(double speed) {
 }
 
 void SkidSteerDrive::rotate(double speed) {
-    // Run left motors at positive speed
     this->tLeft->move(speed);
     this->bLeft->move(speed);
 
-    // Run right motors at negative speed
     this->tRight->move(-speed);
     this->bRight->move(-speed);
 }
 
 void SkidSteerDrive::stop() {
-    // Set voltage of all motors to 0
     this->tLeft->move(0);
     this->tRight->move(0);
     this->bLeft->move(0);
@@ -38,38 +34,24 @@ void SkidSteerDrive::stop() {
 
 void SkidSteerDrive::tank(double leftSpeed, double rightSpeed, double threshold) {
     // Apply threshold
-    if (leftSpeed < threshold) {
-        leftSpeed = 0;
-    }
+    leftSpeed = leftSpeed < threshold ? 0 : leftSpeed;
+    rightSpeed = rightSpeed < threshold ? 0 : rightSpeed;
 
-    if (rightSpeed < threshold) {
-        rightSpeed = 0;
-    }
-
-    // Apply left speed to left motors
     this->tLeft->move(leftSpeed);
     this->bLeft->move(leftSpeed);
 
-    // Apply right speed to right motors
     this->tRight->move(rightSpeed);
     this->bRight->move(rightSpeed);
 }
 
 void SkidSteerDrive::arcade(double forwardSpeed, double yaw, double threshold) {
     // Apply threshold
-    if (forwardSpeed < threshold) {
-        forwardSpeed = 0;
-    }
+    forwardSpeed = forwardSpeed < threshold ? 0 : forwardSpeed;
+    yaw = forwardSpeed < threshold ? 0 : yaw;
 
-    if (yaw < threshold) {
-        yaw = 0;
-    }
-
-    // Apply power + turn to left side
     this->tLeft->move(forwardSpeed + yaw);
     this->bLeft->move(forwardSpeed + yaw);
     
-    // Apply power - turn to right side
     this->tRight->move(forwardSpeed - yaw);
     this->bRight->move(forwardSpeed - yaw);
 }
