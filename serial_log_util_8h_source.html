@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>VEX V5 Bootstrapped Project: File Members</title>
+<title>VEX V5 Bootstrapped Project: include/serialLogUtil.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -66,7 +66,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('globals_func.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('serial_log_util_8h_source.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -84,65 +84,32 @@ $(document).ready(function(){initNavTree('globals_func.html',''); initResizable(
 </iframe>
 </div>
 
+<div class="header">
+  <div class="headertitle">
+<div class="title">serialLogUtil.h</div>  </div>
+</div><!--header-->
 <div class="contents">
-&#160;<ul>
-<li>autonomous()
-: <a class="el" href="main_8h.html#a2df3d06bc5bced154da27fce393f991f">main.h</a>
-</li>
-<li>competition_initialize()
-: <a class="el" href="main_8h.html#a16a77889800f9a99f69f9dd026013505">main.h</a>
-</li>
-<li>degToRad()
-: <a class="el" href="tracking_8h.html#aef51d393e517f3e5ccad0c1c698c63c5">tracking.h</a>
-</li>
-<li>disabled()
-: <a class="el" href="main_8h.html#a3ed01880f60e5a3afffc71f623174dbd">main.h</a>
-</li>
-<li>formatString()
-: <a class="el" href="display_controller_8h.html#a3050e51504d5a6bfbc9ee08dfe9a2417">displayController.h</a>
-</li>
-<li>getAutonMode()
-: <a class="el" href="display_controller_8h.html#a1c690da20f920dce73b87082c560a993">displayController.h</a>
-</li>
-<li>initialize()
-: <a class="el" href="main_8h.html#a9efe22aaead3a5e936b5df459de02eba">main.h</a>
-</li>
-<li>myAuton()
-: <a class="el" href="main_8h.html#a25f3328645df9a04d92783af2e42fa6c">main.h</a>
-</li>
-<li>myOpControl()
-: <a class="el" href="main_8h.html#ae8f6386da0aafd1afff03d14121a03a0">main.h</a>
-</li>
-<li>opcontrol()
-: <a class="el" href="main_8h.html#a1903abdb5ef0f301d660754c8315fc17">main.h</a>
-</li>
-<li>radToDeg()
-: <a class="el" href="tracking_8h.html#a169dc5ee713c133d690b588159903f70">tracking.h</a>
-</li>
-<li>rotateVector()
-: <a class="el" href="tracking_8h.html#a687d576e8a1282fde1ca01ecbd7acd4e">tracking.h</a>
-</li>
-<li>setAutonMode()
-: <a class="el" href="display_controller_8h.html#a7aaeb6b7150b67a02a1e25f60334fbed">displayController.h</a>
-</li>
-<li>toGlobalCoordinates()
-: <a class="el" href="tracking_8h.html#a65926f594730c373d1e08b675465e07b">tracking.h</a>
-</li>
-<li>toLocalCoordinates()
-: <a class="el" href="tracking_8h.html#ae7a15e553eda3f2b75579c9dcdf69276">tracking.h</a>
-</li>
-<li>tracking()
-: <a class="el" href="tracking_8h.html#af84bdd0ecb717e7da53837699a768280">tracking.h</a>
-</li>
-<li>updateFixedMessages()
-: <a class="el" href="display_controller_8h.html#a9e36c896a16a75fa1068c25791dc442a">displayController.h</a>
-</li>
-</ul>
-</div><!-- contents -->
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;stdarg.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">enum</span> LOG_COLOR {</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    BLACK = 0,</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    RED = 1,</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    GREEN = 2,</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    YELLOW = 3,</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    BLUE = 4,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    MAGENTA = 5,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    CYAN = 6,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    WHITE = 7</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;};</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> colorPrintf(<span class="keyword">const</span> <span class="keywordtype">char</span>* fmt, LOG_COLOR color, ...);</div>
+</div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><b>serialLogUtil.h</b></li>
     <li class="footer">Generated on Fri Jan 21 2022 14:16:23 for VEX V5 Bootstrapped Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>

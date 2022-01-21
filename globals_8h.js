@@ -8,6 +8,7 @@ var globals_8h =
     [ "driveTrainPID", "globals_8h.html#a4cbeb7cf18980bd46a2804e0b1210674", null ],
     [ "lEnc", "globals_8h.html#a34584f147dfae2bd31583a5d75822fb8", null ],
     [ "masterController", "globals_8h.html#aa596e207060fbc64178eae4e23ffd708", null ],
+    [ "myImu", "globals_8h.html#a83bf4ec430b133af5acfca600593200b", null ],
     [ "rEnc", "globals_8h.html#aac9fab541047b8f67b29107b5699be03", null ],
     [ "tLeft", "globals_8h.html#a7f6f9a082eebdc5bdac372a0c21ffe4c", null ],
     [ "trackingData", "globals_8h.html#a1360d607e875fb4f719674afce4b8317", null ],

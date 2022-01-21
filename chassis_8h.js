@@ -1,5 +1,6 @@
 var chassis_8h =
 [
+    [ "BACK_WHEEL_OFFSET", "chassis_8h.html#a2834b0d91d9240dec617e0626ca3cf82", null ],
     [ "BENC_PORT_BOT", "chassis_8h.html#a47b6654d56486b0a4bbf1cf0d2e2872a", null ],
     [ "BENC_PORT_TOP", "chassis_8h.html#ae1ed7af00f533cc312e709f1cf643954", null ],
     [ "BL_PORT", "chassis_8h.html#aee4d6a4bb97672b8cc732efd671311e4", null ],
