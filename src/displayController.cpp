@@ -30,11 +30,10 @@ const std::map<std::string, lv_color_t> colors {
     {"purple", LV_COLOR_MAKE(88, 36, 133)},
     {"grey", LV_COLOR_MAKE(69, 69, 69)},
     {"yellow", LV_COLOR_MAKE(255, 210, 72)},
-    {"white", LV_COLOR_MAKE(255, 255, 255)}
+    {"white", LV_COLOR_MAKE(255, 255, 255)},
+    {"black", LV_COLOR_MAKE(0, 0, 0)}
 };
 
-/**
- * \brief All possible 
 /**
  * \brief All the log messages and their respective data.
 */
@@ -73,6 +72,11 @@ static lv_obj_t* scr;
 
 // List object to store messages
 lv_obj_t* messageList;
+
+// Chart for PID Graph 
+lv_obj_t * chart;
+lv_chart_series_t * ser_err;
+lv_chart_series_t * ser_pow;
 
 /**
  * \brief Button callback when an autonomous mode is selected.
@@ -207,12 +211,12 @@ DisplayController::DisplayController() {
     initialized = true;
 
     // Set up the styles
-    redStyle = createStyle(colors.at("red"), colors.at("red"), 4, 2, colors.at("white"), 5, 5, 0, 0, colors.at("red"), colors.at("white"));
-    blueStyle = createStyle(colors.at("blue"), colors.at("blue"), 4, 2, colors.at("white"), 5, 5, 0, 0, colors.at("red"), colors.at("white"));
-    neutralStyle = createStyle(colors.at("purple"), colors.at("purple"), 4, 2, colors.at("white"), 5, 5, 0, 0, colors.at("red"), colors.at("white"));
-    logStyle = createStyle(colors.at("grey"), colors.at("grey"), 4, 2, colors.at("white"), 5, 5, 0, 0, colors.at("red"), colors.at("white"));
-    warningStyle = createStyle(colors.at("yellow"), colors.at("yellow"), 4, 2, colors.at("white"), 5, 5, 0, 0, colors.at("red"), colors.at("black"));
-    mBoxStyle = createStyle(colors.at("white"), colors.at("white"), 4, 2, colors.at("white"), 5, 5, 0, 0, colors.at("red"), colors.at("black"));
+    redStyle     = createStyle(colors.at("red"),    colors.at("red"),     4, 2, colors.at("white"), 5, 5, 0, 0, colors.at("red"), colors.at("white"));
+    blueStyle    = createStyle(colors.at("blue"),   colors.at("blue"),    4, 2, colors.at("white"), 5, 5, 0, 0, colors.at("red"), colors.at("white"));
+    neutralStyle = createStyle(colors.at("purple"), colors.at("purple"),  4, 2, colors.at("white"), 5, 5, 0, 0, colors.at("red"), colors.at("white"));
+    logStyle     = createStyle(colors.at("grey"),   colors.at("grey"),    4, 2, colors.at("white"), 5, 5, 0, 0, colors.at("red"), colors.at("white"));
+    warningStyle = createStyle(colors.at("yellow"), colors.at("yellow"),  4, 2, colors.at("white"), 5, 5, 0, 0, colors.at("red"), colors.at("black"));
+    mBoxStyle    = createStyle(colors.at("white"),  colors.at("white"),   4, 2, colors.at("white"), 5, 5, 0, 0, colors.at("red"), colors.at("black"));
 
     // Set up the theme
     coloredBg = initTheme(10, colors.at("purple"), colors.at("purple"), 0);
@@ -222,11 +226,17 @@ DISPLAY_MODE DisplayController::getMode() {
     return this->mode;
 }
 
+void DisplayController::clearScreen() {
+    lv_obj_clean(scr);
+}
+
 void DisplayController::setMode(DISPLAY_MODE mode) {
     this->mode = mode;
 
     // Clean the screen
-    lv_obj_clean(scr);
+    if (scr) {
+        lv_obj_clean(scr);
+    }
 
     // Create and load a new page
     scr = lv_page_create(NULL, NULL);
@@ -236,6 +246,7 @@ void DisplayController::setMode(DISPLAY_MODE mode) {
     // Set the theme
     lv_theme_set_current(coloredBg);
 
+    
     // Display the correct page based on the mode variable
     switch (mode) {
         // Display mode: Autonomous selection
@@ -250,7 +261,7 @@ void DisplayController::setMode(DISPLAY_MODE mode) {
                 0, 
                 std::get<0>(buttonDimensions),
                 std::get<1>(buttonDimensions),
-                "Protected Zone\n(5-point)",
+                "AWP Line with Rings",
                 autonSelected,
                 &redStyle,
                 scr
@@ -263,7 +274,7 @@ void DisplayController::setMode(DISPLAY_MODE mode) {
                 20, 
                 std::get<0>(buttonDimensions),
                 std::get<1>(buttonDimensions),
-                "Unprotected Zone\n(5-point)",
+                "MOGO Grab\n(No Rings)",
                 autonSelected,
                 &redStyle,
                 scr
@@ -276,7 +287,7 @@ void DisplayController::setMode(DISPLAY_MODE mode) {
                 LV_VER_RES - 80, 
                 std::get<0>(buttonDimensions),
                 std::get<1>(buttonDimensions),
-                "Unprotected Zone\n(5-point)",
+                "AWP Line with Rings",
                 autonSelected,
                 &blueStyle,
                 scr
@@ -289,25 +300,13 @@ void DisplayController::setMode(DISPLAY_MODE mode) {
                 LV_VER_RES - 80, 
                 std::get<0>(buttonDimensions),
                 std::get<1>(buttonDimensions),
-                "Protected Zone\n(5-point)",
+                "MOGO Grab\n(No Rings)",
                 autonSelected,
                 &blueStyle,
                 scr
             );
 
-            // Autonomous Blue 2
-            renderButton(
-                AUTO_BLUE_2, 
-                LV_HOR_RES / 2, 
-                LV_VER_RES - 80, 
-                std::get<0>(buttonDimensions),
-                std::get<1>(buttonDimensions),
-                "Protected Zone\n(5-point)",
-                autonSelected,
-                &blueStyle,
-                scr
-            );
-
+            /**
             // Simple autonomous (one ball)
             renderButton(
                 AUTO_SIMPLE, 
@@ -333,6 +332,7 @@ void DisplayController::setMode(DISPLAY_MODE mode) {
                 &neutralStyle,
                 scr
             );
+            */
 
             break;
         }
@@ -341,20 +341,20 @@ void DisplayController::setMode(DISPLAY_MODE mode) {
         case CONFIRM: {
             AUTON_MODE autoID = getAutonMode();
             std::string autoName;
-
+            
             // Get the current autonomous name based on the ID
             switch (autoID) {
                 case (AUTO_RED_1):
-                    autoName = "Red Protected Routine";
+                    autoName = "Red AWP Line with Rings";
                     break;
                 case (AUTO_RED_2):
-                    autoName = "Red Unprotected Routine";
+                    autoName = "Red MOGO Grab\n(No Rings)";
                     break;
                 case (AUTO_BLUE_1):
-                    autoName = "Blue Protected Routine";
+                    autoName = "Blue AWP Line with Rings";
                     break;
                 case (AUTO_BLUE_2):
-                    autoName = "Blue Unprotected Routine";
+                    autoName = "Blue MOGO Grab\n(No Rings)";
                     break;
                 case (AUTO_SIMPLE):
                     autoName = "One Cube Routine";
@@ -368,7 +368,7 @@ void DisplayController::setMode(DISPLAY_MODE mode) {
             }
 
             // Render the text on the screen
-            renderButton(-1, 80, 50, 150, 300, autoName, nullButtonCallback, &neutralStyle, scr);
+            renderButton(-1, 80, 40, 300, 200, autoName, nullButtonCallback, &neutralStyle, scr);
             break;
         }
 
@@ -397,6 +397,37 @@ void DisplayController::setMode(DISPLAY_MODE mode) {
             // Display the messagel list
             messageList = lv_list_create(lv_scr_act(), NULL);
             lv_obj_set_width(messageList, LV_HOR_RES - 40);
+            break;
+        }
+
+        // Display mode: Show statistics on screen (battery level, odom, etc)
+        case STATS: {
+            // Clear again to ensure proper overwrite
+            lv_obj_clean(scr);
+            scr = lv_page_create(NULL, NULL);
+            lv_scr_load(scr);
+
+            // Battery 
+            char batteryString[15];
+            sprintf(batteryString, "Battery: %2.0f%%", pros::battery::get_capacity());
+            renderLabel(batteryString, 20, 10, scr);
+
+            /*
+            // Tracking data
+            char trackingString[100];
+            sprintf(trackingString, "X: %f\nY: %f\nA: %f\n", trackingData.getPos().getX(), trackingData.getPos().getY(), radToDeg(trackingData.getHeading()));
+            renderLabel(trackingString, 20, 60, scr);
+        
+            /*
+            char myIntakeSpeed[50];
+            sprintf(myIntakeSpeed, "Intake: %f", intake.getPower()); 
+            renderLabel(myIntakeSpeed, 20, 60, scr);
+
+            
+            char forklift1Pos[50];
+            sprintf(forklift1Pos, "Forklift1: %f", forklift1.getPosition()); 
+            renderLabel(forklift1Pos, 20, 120, scr);
+            */
             break;
         }
 
