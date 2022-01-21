@@ -110,95 +110,91 @@ $(document).ready(function(){initNavTree('display_controller_8h_source.html','')
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="display_controller_8h.html#aa694eadcc25ca533db97c79541ebf844">   35</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="display_controller_8h.html#aa694eadcc25ca533db97c79541ebf844">DISPLAY_MODE</a> {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    SELECTOR, <span class="comment">// The autonomous selector</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    CONFIRM, <span class="comment">// Shows the autonomous selected</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    MATCH, <span class="comment">// The mode to display during a match</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    DEBUG <span class="comment">// The debug mode</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keywordtype">void</span> <a class="code" href="display_controller_8h.html#a7aaeb6b7150b67a02a1e25f60334fbed">setAutonMode</a>(<a class="code" href="display_controller_8h.html#ab7cd853b964c2d6385b9659d12c5f5a8">AUTON_MODE</a> mode);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<a class="code" href="display_controller_8h.html#ab7cd853b964c2d6385b9659d12c5f5a8">AUTON_MODE</a> <a class="code" href="display_controller_8h.html#a1c690da20f920dce73b87082c560a993">getAutonMode</a>();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> <a class="code" href="display_controller_8h.html#a9e36c896a16a75fa1068c25791dc442a">updateFixedMessages</a>(<span class="keywordtype">void</span>* param);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;std::string <a class="code" href="display_controller_8h.html#a3050e51504d5a6bfbc9ee08dfe9a2417">formatString</a>(<span class="keyword">const</span> std::string &amp;format, Args... args);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_fixed_debug_info.html">   70</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_fixed_debug_info.html">FixedDebugInfo</a> {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="class_fixed_debug_info.html#a997a6bb6e631b6aca3ec8556cdf477f2">FixedDebugInfo</a>(<span class="keyword">const</span> std::string&amp; format, <span class="keywordtype">void</span>* callback, <span class="keywordtype">char</span> type);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        std::string <a class="code" href="class_fixed_debug_info.html#a29d7a2f291eba9075eec9689f08d2013">getLabel</a>();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        std::string format;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordtype">void</span>* callback;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">char</span> type;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="class_display_controller.html">   94</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_display_controller.html">DisplayController</a> {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <a class="code" href="class_display_controller.html#a94b98744869e3f53296228a7d13f126f">DisplayController</a>();</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <a class="code" href="display_controller_8h.html#aa694eadcc25ca533db97c79541ebf844">DISPLAY_MODE</a> <a class="code" href="class_display_controller.html#ae0a209c2a846add835efd43de1b013c9">getMode</a>();</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_display_controller.html#a1c4f151e8a38e87b950b4c4d247b52b2">setMode</a>(<a class="code" href="display_controller_8h.html#aa694eadcc25ca533db97c79541ebf844">DISPLAY_MODE</a> newMode);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="class_display_controller.html#ac63fb33746c815bfe1a9dc3a84ee5e3e">  115</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_display_controller.html#ac63fb33746c815bfe1a9dc3a84ee5e3e">startDebugMode</a>();</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_display_controller.html#a066d0bc2ba72bc1b6918c930c498505e">logMessage</a>(std::string message, <a class="code" href="display_controller_8h.html#a74e18816e31e963d327831b5cb9edee5">LOGGING_LEVEL</a> level = LOG);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_display_controller.html#ade02d46c219e5c3e47147bff588318db">clearLogs</a>();</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_display_controller.html#ae3be9e9a1593140d77e83a6fd4a3ef17">addFixedMessage</a>(std::string format, <span class="keywordtype">char</span> type, <span class="keywordtype">void</span>* callback);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> initialized;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <a class="code" href="display_controller_8h.html#aa694eadcc25ca533db97c79541ebf844">DISPLAY_MODE</a> mode;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        lv_obj_t* renderButton(</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keywordtype">int</span> <span class="keywordtype">id</span>, </div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            <span class="keywordtype">int</span> x, </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keywordtype">int</span> y, </div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="keywordtype">int</span> width, </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordtype">int</span> height, </div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            std::string text, </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            lv_action_t action, </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            lv_style_t *relStyle, </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            lv_obj_t *host</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        );</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        lv_obj_t* renderLabel(</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            std::string text,</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <span class="keywordtype">int</span> x,</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordtype">int</span> y,</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            lv_obj_t* host</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        );</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordtype">void</span> renderWarning(std::string message);</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keywordtype">void</span> renderError(std::string message);</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordtype">void</span> renderDebug(std::string message);</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        lv_theme_t* initTheme(<span class="keywordtype">int</span> hue, lv_color_t borderColor, lv_color_t mainColor, <span class="keywordtype">int</span> borderWidth);</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;};</div>
-<div class="ttc" id="aclass_display_controller_html"><div class="ttname"><a href="class_display_controller.html">DisplayController</a></div><div class="ttdoc">The display controller class, which manages the V5 display.</div><div class="ttdef"><b>Definition:</b> displayController.h:94</div></div>
-<div class="ttc" id="aclass_display_controller_html_a066d0bc2ba72bc1b6918c930c498505e"><div class="ttname"><a href="class_display_controller.html#a066d0bc2ba72bc1b6918c930c498505e">DisplayController::logMessage</a></div><div class="ttdeci">void logMessage(std::string message, LOGGING_LEVEL level=LOG)</div><div class="ttdoc">Log a message.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:423</div></div>
-<div class="ttc" id="aclass_display_controller_html_a1c4f151e8a38e87b950b4c4d247b52b2"><div class="ttname"><a href="class_display_controller.html#a1c4f151e8a38e87b950b4c4d247b52b2">DisplayController::setMode</a></div><div class="ttdeci">void setMode(DISPLAY_MODE newMode)</div><div class="ttdoc">Changes the current display mode.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:225</div></div>
-<div class="ttc" id="aclass_display_controller_html_a94b98744869e3f53296228a7d13f126f"><div class="ttname"><a href="class_display_controller.html#a94b98744869e3f53296228a7d13f126f">DisplayController::DisplayController</a></div><div class="ttdeci">DisplayController()</div><div class="ttdoc">Constructor for the DisplayController class.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:201</div></div>
-<div class="ttc" id="aclass_display_controller_html_ac63fb33746c815bfe1a9dc3a84ee5e3e"><div class="ttname"><a href="class_display_controller.html#ac63fb33746c815bfe1a9dc3a84ee5e3e">DisplayController::startDebugMode</a></div><div class="ttdeci">void startDebugMode()</div><div class="ttdoc">Start debug mode, which prints statements to the console.</div></div>
-<div class="ttc" id="aclass_display_controller_html_ade02d46c219e5c3e47147bff588318db"><div class="ttname"><a href="class_display_controller.html#ade02d46c219e5c3e47147bff588318db">DisplayController::clearLogs</a></div><div class="ttdeci">void clearLogs()</div><div class="ttdoc">Clear all logs.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:454</div></div>
-<div class="ttc" id="aclass_display_controller_html_ae0a209c2a846add835efd43de1b013c9"><div class="ttname"><a href="class_display_controller.html#ae0a209c2a846add835efd43de1b013c9">DisplayController::getMode</a></div><div class="ttdeci">DISPLAY_MODE getMode()</div><div class="ttdoc">Gets the current display mode.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:221</div></div>
-<div class="ttc" id="aclass_display_controller_html_ae3be9e9a1593140d77e83a6fd4a3ef17"><div class="ttname"><a href="class_display_controller.html#ae3be9e9a1593140d77e83a6fd4a3ef17">DisplayController::addFixedMessage</a></div><div class="ttdeci">void addFixedMessage(std::string format, char type, void *callback)</div><div class="ttdoc">Prints a fixed format debug message.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:460</div></div>
-<div class="ttc" id="aclass_fixed_debug_info_html"><div class="ttname"><a href="class_fixed_debug_info.html">FixedDebugInfo</a></div><div class="ttdoc">Fixed format to retain debug info.</div><div class="ttdef"><b>Definition:</b> displayController.h:70</div></div>
-<div class="ttc" id="aclass_fixed_debug_info_html_a29d7a2f291eba9075eec9689f08d2013"><div class="ttname"><a href="class_fixed_debug_info.html#a29d7a2f291eba9075eec9689f08d2013">FixedDebugInfo::getLabel</a></div><div class="ttdeci">std::string getLabel()</div><div class="ttdoc">Convert the type to a string.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:180</div></div>
-<div class="ttc" id="aclass_fixed_debug_info_html_a997a6bb6e631b6aca3ec8556cdf477f2"><div class="ttname"><a href="class_fixed_debug_info.html#a997a6bb6e631b6aca3ec8556cdf477f2">FixedDebugInfo::FixedDebugInfo</a></div><div class="ttdeci">FixedDebugInfo(const std::string &amp;format, void *callback, char type)</div><div class="ttdoc">Constructor for fixed_debug_info.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:174</div></div>
-<div class="ttc" id="adisplay_controller_8h_html_a1c690da20f920dce73b87082c560a993"><div class="ttname"><a href="display_controller_8h.html#a1c690da20f920dce73b87082c560a993">getAutonMode</a></div><div class="ttdeci">AUTON_MODE getAutonMode()</div><div class="ttdoc">Get the current autonomous mode.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:101</div></div>
-<div class="ttc" id="adisplay_controller_8h_html_a3050e51504d5a6bfbc9ee08dfe9a2417"><div class="ttname"><a href="display_controller_8h.html#a3050e51504d5a6bfbc9ee08dfe9a2417">formatString</a></div><div class="ttdeci">std::string formatString(const std::string &amp;format, Args... args)</div><div class="ttdoc">Safely formats a string similarly to printf, accepting varriables.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:161</div></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    SELECTOR,  <span class="comment">// The autonomous selector</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    CONFIRM,   <span class="comment">// Shows the autonomous selected</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    MATCH,     <span class="comment">// The mode to display during a match</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    DEBUG,     <span class="comment">// The debug mode,</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    STATS,     <span class="comment">// Shows statistics on screen,</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    PID_GRAPH  <span class="comment">// Graph representing error</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">void</span> <a class="code" href="display_controller_8h.html#a7aaeb6b7150b67a02a1e25f60334fbed">setAutonMode</a>(<a class="code" href="display_controller_8h.html#ab7cd853b964c2d6385b9659d12c5f5a8">AUTON_MODE</a> mode);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<a class="code" href="display_controller_8h.html#ab7cd853b964c2d6385b9659d12c5f5a8">AUTON_MODE</a> <a class="code" href="display_controller_8h.html#a1c690da20f920dce73b87082c560a993">getAutonMode</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">void</span> <a class="code" href="display_controller_8h.html#a9e36c896a16a75fa1068c25791dc442a">updateFixedMessages</a>(<span class="keywordtype">void</span>* param);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Args&gt;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;std::string <a class="code" href="display_controller_8h.html#a3050e51504d5a6bfbc9ee08dfe9a2417">formatString</a>(<span class="keyword">const</span> std::string &amp;format, Args... args);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_fixed_debug_info.html">   72</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_fixed_debug_info.html">FixedDebugInfo</a> {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <a class="code" href="class_fixed_debug_info.html#a997a6bb6e631b6aca3ec8556cdf477f2">FixedDebugInfo</a>(<span class="keyword">const</span> std::string&amp; format, <span class="keywordtype">void</span>* callback, <span class="keywordtype">char</span> type);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        std::string <a class="code" href="class_fixed_debug_info.html#a29d7a2f291eba9075eec9689f08d2013">getLabel</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        std::string format;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordtype">void</span>* callback;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordtype">char</span> type;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="class_display_controller.html">   96</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_display_controller.html">DisplayController</a> {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <a class="code" href="class_display_controller.html#a94b98744869e3f53296228a7d13f126f">DisplayController</a>();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <a class="code" href="display_controller_8h.html#aa694eadcc25ca533db97c79541ebf844">DISPLAY_MODE</a> <a class="code" href="class_display_controller.html#ae0a209c2a846add835efd43de1b013c9">getMode</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_display_controller.html#a1c4f151e8a38e87b950b4c4d247b52b2">setMode</a>(<a class="code" href="display_controller_8h.html#aa694eadcc25ca533db97c79541ebf844">DISPLAY_MODE</a> newMode);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_display_controller.html#a066d0bc2ba72bc1b6918c930c498505e">logMessage</a>(std::string message, <a class="code" href="display_controller_8h.html#a74e18816e31e963d327831b5cb9edee5">LOGGING_LEVEL</a> level = LOG);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_display_controller.html#ade02d46c219e5c3e47147bff588318db">clearLogs</a>();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_display_controller.html#ae3be9e9a1593140d77e83a6fd4a3ef17">addFixedMessage</a>(std::string format, <span class="keywordtype">char</span> type, <span class="keywordtype">void</span>* callback);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="class_display_controller.html#a25f8156833eba94454de2e51b85f8116">clearScreen</a>();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">bool</span> initialized;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <a class="code" href="display_controller_8h.html#aa694eadcc25ca533db97c79541ebf844">DISPLAY_MODE</a> mode;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        lv_obj_t* renderButton(</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            <span class="keywordtype">int</span> <span class="keywordtype">id</span>, </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            <span class="keywordtype">int</span> x, </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordtype">int</span> y, </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="keywordtype">int</span> width, </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;            <span class="keywordtype">int</span> height, </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            std::string text, </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            lv_action_t action, </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            lv_style_t *relStyle, </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            lv_obj_t *host</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        );</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        lv_obj_t* renderLabel(</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            std::string text,</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="keywordtype">int</span> x,</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <span class="keywordtype">int</span> y,</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            lv_obj_t* host</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        );</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        lv_theme_t* initTheme(<span class="keywordtype">int</span> hue, lv_color_t borderColor, lv_color_t mainColor, <span class="keywordtype">int</span> borderWidth);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;};</div>
+<div class="ttc" id="aclass_display_controller_html"><div class="ttname"><a href="class_display_controller.html">DisplayController</a></div><div class="ttdoc">The display controller class, which manages the V5 display.</div><div class="ttdef"><b>Definition:</b> displayController.h:96</div></div>
+<div class="ttc" id="aclass_display_controller_html_a066d0bc2ba72bc1b6918c930c498505e"><div class="ttname"><a href="class_display_controller.html#a066d0bc2ba72bc1b6918c930c498505e">DisplayController::logMessage</a></div><div class="ttdeci">void logMessage(std::string message, LOGGING_LEVEL level=LOG)</div><div class="ttdoc">Log a message.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:454</div></div>
+<div class="ttc" id="aclass_display_controller_html_a1c4f151e8a38e87b950b4c4d247b52b2"><div class="ttname"><a href="class_display_controller.html#a1c4f151e8a38e87b950b4c4d247b52b2">DisplayController::setMode</a></div><div class="ttdeci">void setMode(DISPLAY_MODE newMode)</div><div class="ttdoc">Changes the current display mode.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:233</div></div>
+<div class="ttc" id="aclass_display_controller_html_a25f8156833eba94454de2e51b85f8116"><div class="ttname"><a href="class_display_controller.html#a25f8156833eba94454de2e51b85f8116">DisplayController::clearScreen</a></div><div class="ttdeci">void clearScreen()</div><div class="ttdoc">Clears the screen.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:229</div></div>
+<div class="ttc" id="aclass_display_controller_html_a94b98744869e3f53296228a7d13f126f"><div class="ttname"><a href="class_display_controller.html#a94b98744869e3f53296228a7d13f126f">DisplayController::DisplayController</a></div><div class="ttdeci">DisplayController()</div><div class="ttdoc">Constructor for the DisplayController class.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:205</div></div>
+<div class="ttc" id="aclass_display_controller_html_ade02d46c219e5c3e47147bff588318db"><div class="ttname"><a href="class_display_controller.html#ade02d46c219e5c3e47147bff588318db">DisplayController::clearLogs</a></div><div class="ttdeci">void clearLogs()</div><div class="ttdoc">Clear all logs.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:485</div></div>
+<div class="ttc" id="aclass_display_controller_html_ae0a209c2a846add835efd43de1b013c9"><div class="ttname"><a href="class_display_controller.html#ae0a209c2a846add835efd43de1b013c9">DisplayController::getMode</a></div><div class="ttdeci">DISPLAY_MODE getMode()</div><div class="ttdoc">Gets the current display mode.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:225</div></div>
+<div class="ttc" id="aclass_display_controller_html_ae3be9e9a1593140d77e83a6fd4a3ef17"><div class="ttname"><a href="class_display_controller.html#ae3be9e9a1593140d77e83a6fd4a3ef17">DisplayController::addFixedMessage</a></div><div class="ttdeci">void addFixedMessage(std::string format, char type, void *callback)</div><div class="ttdoc">Prints a fixed format debug message.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:491</div></div>
+<div class="ttc" id="aclass_fixed_debug_info_html"><div class="ttname"><a href="class_fixed_debug_info.html">FixedDebugInfo</a></div><div class="ttdoc">Fixed format to retain debug info.</div><div class="ttdef"><b>Definition:</b> displayController.h:72</div></div>
+<div class="ttc" id="aclass_fixed_debug_info_html_a29d7a2f291eba9075eec9689f08d2013"><div class="ttname"><a href="class_fixed_debug_info.html#a29d7a2f291eba9075eec9689f08d2013">FixedDebugInfo::getLabel</a></div><div class="ttdeci">std::string getLabel()</div><div class="ttdoc">Convert the type to a string.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:184</div></div>
+<div class="ttc" id="aclass_fixed_debug_info_html_a997a6bb6e631b6aca3ec8556cdf477f2"><div class="ttname"><a href="class_fixed_debug_info.html#a997a6bb6e631b6aca3ec8556cdf477f2">FixedDebugInfo::FixedDebugInfo</a></div><div class="ttdeci">FixedDebugInfo(const std::string &amp;format, void *callback, char type)</div><div class="ttdoc">Constructor for fixed_debug_info.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:178</div></div>
+<div class="ttc" id="adisplay_controller_8h_html_a1c690da20f920dce73b87082c560a993"><div class="ttname"><a href="display_controller_8h.html#a1c690da20f920dce73b87082c560a993">getAutonMode</a></div><div class="ttdeci">AUTON_MODE getAutonMode()</div><div class="ttdoc">Get the current autonomous mode.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:105</div></div>
+<div class="ttc" id="adisplay_controller_8h_html_a3050e51504d5a6bfbc9ee08dfe9a2417"><div class="ttname"><a href="display_controller_8h.html#a3050e51504d5a6bfbc9ee08dfe9a2417">formatString</a></div><div class="ttdeci">std::string formatString(const std::string &amp;format, Args... args)</div><div class="ttdoc">Safely formats a string similarly to printf, accepting varriables.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:165</div></div>
 <div class="ttc" id="adisplay_controller_8h_html_a74e18816e31e963d327831b5cb9edee5"><div class="ttname"><a href="display_controller_8h.html#a74e18816e31e963d327831b5cb9edee5">LOGGING_LEVEL</a></div><div class="ttdeci">LOGGING_LEVEL</div><div class="ttdoc">Enum representing all possible log levels.</div><div class="ttdef"><b>Definition:</b> displayController.h:26</div></div>
-<div class="ttc" id="adisplay_controller_8h_html_a7aaeb6b7150b67a02a1e25f60334fbed"><div class="ttname"><a href="display_controller_8h.html#a7aaeb6b7150b67a02a1e25f60334fbed">setAutonMode</a></div><div class="ttdeci">void setAutonMode(AUTON_MODE mode)</div><div class="ttdoc">Sets the current autonomous mode.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:97</div></div>
-<div class="ttc" id="adisplay_controller_8h_html_a9e36c896a16a75fa1068c25791dc442a"><div class="ttname"><a href="display_controller_8h.html#a9e36c896a16a75fa1068c25791dc442a">updateFixedMessages</a></div><div class="ttdeci">void updateFixedMessages(void *param)</div><div class="ttdoc">PROS task to update the fixed messages on the display.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:105</div></div>
+<div class="ttc" id="adisplay_controller_8h_html_a7aaeb6b7150b67a02a1e25f60334fbed"><div class="ttname"><a href="display_controller_8h.html#a7aaeb6b7150b67a02a1e25f60334fbed">setAutonMode</a></div><div class="ttdeci">void setAutonMode(AUTON_MODE mode)</div><div class="ttdoc">Sets the current autonomous mode.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:101</div></div>
+<div class="ttc" id="adisplay_controller_8h_html_a9e36c896a16a75fa1068c25791dc442a"><div class="ttname"><a href="display_controller_8h.html#a9e36c896a16a75fa1068c25791dc442a">updateFixedMessages</a></div><div class="ttdeci">void updateFixedMessages(void *param)</div><div class="ttdoc">PROS task to update the fixed messages on the display.</div><div class="ttdef"><b>Definition:</b> displayController.cpp:109</div></div>
 <div class="ttc" id="adisplay_controller_8h_html_aa694eadcc25ca533db97c79541ebf844"><div class="ttname"><a href="display_controller_8h.html#aa694eadcc25ca533db97c79541ebf844">DISPLAY_MODE</a></div><div class="ttdeci">DISPLAY_MODE</div><div class="ttdoc">Enum representing all possible display modes.</div><div class="ttdef"><b>Definition:</b> displayController.h:35</div></div>
 <div class="ttc" id="adisplay_controller_8h_html_ab7cd853b964c2d6385b9659d12c5f5a8"><div class="ttname"><a href="display_controller_8h.html#ab7cd853b964c2d6385b9659d12c5f5a8">AUTON_MODE</a></div><div class="ttdeci">AUTON_MODE</div><div class="ttdoc">Enum representing all possible autonomous modes.</div><div class="ttdef"><b>Definition:</b> displayController.h:13</div></div>
 <div class="ttc" id="amain_8h_html"><div class="ttname"><a href="main_8h.html">main.h</a></div></div>
@@ -208,7 +204,7 @@ $(document).ready(function(){initNavTree('display_controller_8h_source.html','')
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="display_controller_8h.html">displayController.h</a></li>
-    <li class="footer">Generated on Fri Jan 21 2022 14:16:23 for VEX V5 Bootstrapped Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+    <li class="footer">Generated on Fri Jan 21 2022 14:20:51 for VEX V5 Bootstrapped Project by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
   </ul>
 </div>
 </body>

@@ -15,7 +15,9 @@ var display_controller_8h =
       [ "SELECTOR", "display_controller_8h.html#aa694eadcc25ca533db97c79541ebf844a04ad277cae97736d47234917b6bec060", null ],
       [ "CONFIRM", "display_controller_8h.html#aa694eadcc25ca533db97c79541ebf844a8547ec939211e497427e395b924a77f1", null ],
       [ "MATCH", "display_controller_8h.html#aa694eadcc25ca533db97c79541ebf844a1155ee5305ebe5bb9407faa9d395ae93", null ],
-      [ "DEBUG", "display_controller_8h.html#aa694eadcc25ca533db97c79541ebf844a0593585da9181e972974c1274d8f2b4f", null ]
+      [ "DEBUG", "display_controller_8h.html#aa694eadcc25ca533db97c79541ebf844a0593585da9181e972974c1274d8f2b4f", null ],
+      [ "STATS", "display_controller_8h.html#aa694eadcc25ca533db97c79541ebf844a56417e944da7c3429008202353a7ceba", null ],
+      [ "PID_GRAPH", "display_controller_8h.html#aa694eadcc25ca533db97c79541ebf844ab60f976b38d1c21d4518af92cba6ab75", null ]
     ] ],
     [ "LOGGING_LEVEL", "display_controller_8h.html#a74e18816e31e963d327831b5cb9edee5", [
       [ "LOG", "display_controller_8h.html#a74e18816e31e963d327831b5cb9edee5acd7ffe737ad5fb21fbd7499886934910", null ],
