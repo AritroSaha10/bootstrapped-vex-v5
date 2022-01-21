@@ -31,3 +31,6 @@
 #define TRACKING_WHEEL_DIAMETER 2.75f
 #define WHEELBASE 10.25f
 #define BACK_WHEEL_OFFSET 5.0f
+
+// Sensor ports
+#define IMU_PORT 14

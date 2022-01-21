@@ -44,3 +44,6 @@ extern DisplayController display;
 
 // Actual controller
 extern pros::Controller masterController;
+
+// Sensors
+extern pros::IMU myImu;
